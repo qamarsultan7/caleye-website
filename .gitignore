@@ -1,1 +1,65 @@
 image-generation-prompts.json
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build / Dependencies
+node_modules/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IMPORTANT: Image Management Strategy
+# ====================================
+# By DEFAULT, this .gitignore ALLOWS image files to be tracked in git
+# This keeps your generated images backed up in version control
+#
+# Images stored locally in:
+# - images/features/*.webp        (6 feature images)
+# - images/how-it-works/*.webp    (5 step images)
+# - images/misc/*.webp            (other images as needed)
+#
+# Why track images in git?
+# ✓ Keeps all project assets in one place
+# ✓ Easy collaboration with version history
+# ✓ Images backup with code changes
+# ✓ No external dependencies or CDN needed
+#
+# If you have VERY LARGE image files and want to exclude them:
+# Uncomment ONLY the lines you need below
+#
+# images/features/*.webp
+# images/features/*.png
+# images/features/*.jpg
+# images/how-it-works/*.webp
+# images/how-it-works/*.png
+# images/how-it-works/*.jpg
+# images/misc/*.webp
+# images/misc/*.png
+# images/misc/*.jpg
+
+# Exclude only temporary image files
+images/**/*.tmp
+images/**/*.bak
+images/**/*.swp
+
+# Keep documentation and guides
+!images/
+!images/features/
+!images/how-it-works/
+!images/misc/
+!images/IMAGE_GUIDE.md
