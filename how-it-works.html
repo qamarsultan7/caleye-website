@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how CalEye works to track food and nutrition instantly. Step-by-step explainer.">
+    <meta name="title" content="How It Works - CalEye">
+
+    <title>How It Works - CalEye</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..150,100..700;1,9..150,100..700&family=Fraunces:opsz,wght@9..144,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/components.css">
+    <link rel="stylesheet" href="/static/styles/animations.css">
+
+    <style>
+        .hero {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0a2925 100%);
+            color: var(--text-on-dark);
+            padding-top: 80px;
+            padding-bottom: var(--space-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(51, 221, 176, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .hero h1 {
+            margin: 0 0 var(--space-md) 0;
+            color: var(--text-on-dark);
+        }
+
+        .hero p {
+            color: rgba(230, 247, 242, 0.9);
+            font-size: 18px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Timeline */
+        .timeline {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+            position: relative;
+            padding: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: linear-gradient(180deg, var(--primary-500) 0%, transparent 100%);
+                transform: translateX(-50%);
+            }
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-item {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-2xl);
+                align-items: center;
+            }
+
+            .timeline-item:nth-child(odd) {
+                direction: rtl;
+            }
+
+            .timeline-item:nth-child(odd) > * {
+                direction: ltr;
+            }
+
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 40px;
+                width: 16px;
+                height: 16px;
+                background: var(--primary-500);
+                border: 4px solid var(--bg);
+                border-radius: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+            }
+        }
+
+        .timeline-item-number {
+            font-size: 64px;
+            font-weight: 900;
+            color: rgba(15, 165, 139, 0.05);
+            position: absolute;
+            top: -20px;
+            left: 0;
+            z-index: 0;
+            line-height: 1;
+        }
+
+        .timeline-item-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-700) 100%);
+            border-radius: 50%;
+            font-size: 40px;
+            margin-bottom: var(--space-lg);
+            box-shadow: 0 10px 30px rgba(15, 165, 139, 0.2);
+        }
+
+        .timeline-item h3 {
+            margin: 0 0 var(--space-md) 0;
+        }
+
+        .timeline-item p {
+            margin: 0;
+            max-width: 500px;
+        }
+
+        .timeline-item-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-top: var(--space-lg);
+        }
+
+        .timeline-item-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: var(--bg);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid rgba(15, 165, 139, 0.1);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-md);
+            transition: all var(--transition-base);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-lg);
+            background: var(--surface);
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            width: 100%;
+            text-align: left;
+            transition: all var(--transition-base);
+        }
+
+        .faq-question:hover {
+            color: var(--primary-500);
+        }
+
+        .faq-question::after {
+            content: '▼';
+            display: inline-block;
+            margin-left: auto;
+            transition: transform var(--transition-base);
+            font-size: 12px;
+            margin-left: var(--space-md);
+        }
+
+        details[open] > .faq-question::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 var(--space-lg) var(--space-lg);
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .faq-answer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="/" class="logo">
+                <span class="logo-mark">👁️</span>
+                <span>CalEye</span>
+            </a>
+
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="/static/features.html">Features</a></li>
+                <li><a href="/static/how-it-works.html">How It Works</a></li>
+                <li><a href="/static/pricing.html">Pricing</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#" class="btn btn--primary btn--small">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav-menu">
+        <ul class="nav-menu-items">
+            <li><a href="/">Home</a></li>
+            <li><a href="/static/features.html">Features</a></li>
+            <li><a href="/static/how-it-works.html">How It Works</a></li>
+            <li><a href="/static/pricing.html">Pricing</a></li>
+        </ul>
+    </div>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-up">
+                    <h1>Step-by-step to smarter eating</h1>
+                    <p>CalEye makes nutrition tracking as simple as 1-2-3. No complexity. No friction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section style="padding: var(--space-2xl) 0;">
+            <div class="container">
+                <div class="timeline">
+                    <div class="timeline-item fade-left">
+                        <div class="timeline-item-number">1</div>
+                        <div class="timeline-item-content">
+                            <div class="timeline-item-icon">📸</div>
+                            <h3>Open CalEye & Snap</h3>
+                            <p>Launch the app and point your camera at your meal. Take a photo from any angle—CalEye works with plated meals, take-out containers, home-cooked dishes, anything.</p>
+                        </div>
+                        <div class="timeline-item-image">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=80" alt="Taking food photo" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-right">
+                        <div class="timeline-item-content">
+                            <div class="timeline-item-icon">⚙️</div>
+                            <h3>AI Identifies Food</h3>
+                            <p>Our advanced AI engine processes your photo in milliseconds. It identifies food items, estimates portions, and calculates nutrition instantly. No manual search needed.</p>
+                        </div>
+                        <div class="timeline-item-image">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&q=80" alt="AI processing" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-left">
+                        <div class="timeline-item-number">3</div>
+                        <div class="timeline-item-content">
+                            <div class="timeline-item-icon">📊</div>
+                            <h3>View Nutrition Breakdown</h3>
+                            <p>Get instant access to calories, macros, micros, and more. See exactly what you're eating with a beautiful, easy-to-read display.</p>
+                        </div>
+                        <div class="timeline-item-image">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&q=80" alt="Nutrition results" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-right">
+                        <div class="timeline-item-content">
+                            <div class="timeline-item-icon">✓</div>
+                            <h3>Confirm & Log</h3>
+                            <p>Review the results. Edit portion sizes or food items if needed. One tap to log your meal to your daily diary.</p>
+                        </div>
+                        <div class="timeline-item-image">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Logging meal" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-left">
+                        <div class="timeline-item-number">5</div>
+                        <div class="timeline-item-content">
+                            <div class="timeline-item-icon">📈</div>
+                            <h3>Track Your Progress</h3>
+                            <p>Watch your daily totals update in real-time. Stay on track with your goals. Review your history and spot eating patterns.</p>
+                        </div>
+                        <div class="timeline-item-image">
+                            <img src="https://images.unsplash.com/photo-1516383740770-fbdea19cf0fa?w=500&q=80" alt="Progress tracking" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about CalEye</p>
+                </div>
+
+                <div class="faq-container">
+                    <details class="faq-item fade-up">
+                        <summary class="faq-question">How accurate is the AI food recognition?</summary>
+                        <div class="faq-answer">
+                            <p>CalEye's AI has been trained on over 50,000 food photos and achieves 99.2% accuracy on common foods. For the remaining edge cases, you can manually adjust portions and ingredients. We continuously improve accuracy with each scan.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item fade-up">
+                        <summary class="faq-question">Does CalEye work with all types of food?</summary>
+                        <div class="faq-answer">
+                            <p>CalEye recognizes 5000+ food types globally, including cuisines from around the world, home-cooked meals, restaurant dishes, packaged foods, and more. It excels with mixed dishes and complex meals that would be tedious to log manually.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item fade-up">
+                        <summary class="faq-question">Can I use CalEye without an internet connection?</summary>
+                        <div class="faq-answer">
+                            <p>Yes! CalEye's core features work completely offline. You can scan meals, view your history, and track progress without internet. Your data automatically syncs when you reconnect to the network.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item fade-up">
+                        <summary class="faq-question">How does CalEye handle my privacy?</summary>
+                        <div class="faq-answer">
+                            <p>Your food photos are never permanently stored on our servers. AI processing is ephemeral—the image is processed and then deleted. All data is encrypted in transit and at rest. You own your data and can export it anytime.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item fade-up">
+                        <summary class="faq-question">When will CalEye be available on iOS?</summary>
+                        <div class="faq-answer">
+                            <p>CalEye is coming to iOS soon! Android users can download now from Google Play. Sign up on our website to get notified the moment the iOS app launches.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item fade-up">
+                        <summary class="faq-question">Is there a free version or do I need to pay?</summary>
+                        <div class="faq-answer">
+                            <p>CalEye is completely free to download and use. You get 10 AI scans per day on the free tier, plus full access to history, goals tracking, and offline features. A Pro tier (coming soon) will offer unlimited scans and additional coaching features.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="background: linear-gradient(135deg, var(--bg-dark) 0%, #0a2925 100%); color: var(--text-on-dark); padding: var(--space-2xl) 0;">
+            <div class="container text-center">
+                <h2 class="fade-up" style="color: var(--text-on-dark);">Ready to get started?</h2>
+                <p class="fade-up" style="color: rgba(230, 247, 242, 0.9); margin-bottom: var(--space-xl);">
+                    Start tracking your meals instantly with CalEye. Download free today.
+                </p>
+                <a href="#" class="store-btn store-btn--google fade-up">
+                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 3L3 15l12 12 12-12z" fill="currentColor"/>
+                    </svg>
+                    Get it on Google Play
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p class="footer-title">CalEye</p>
+                    <p style="color: var(--text-on-dark);">AI-powered nutrition tracking for everyone</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="/static/features.html" class="footer-link">Features</a>
+                    <a href="/static/how-it-works.html" class="footer-link">How It Works</a>
+                    <a href="/static/pricing.html" class="footer-link">Pricing</a>
+                    <a href="/static/privacy.html" class="footer-link">Privacy Policy</a>
+                </div>
+            </div>
+            <p class="footer-bottom">&copy; 2025 CalEye. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/static/scripts/main.js"></script>
+    <script src="/static/scripts/smoothscroll.js"></script>
+</body>
+</html>

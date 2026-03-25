@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get support from the CalEye team. We're here to help with app questions and feedback.">
+    <meta name="title" content="Support - CalEye">
+
+    <title>CalEye Contact & Support</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..150,100..700;1,9..150,100..700&family=Fraunces:opsz,wght@9..144,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/components.css">
+    <link rel="stylesheet" href="/static/styles/animations.css">
+
+    <style>
+        .hero {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0a2925 100%);
+            color: var(--text-on-dark);
+            padding-top: 80px;
+            padding-bottom: var(--space-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(51, 221, 176, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin: 0 0 var(--space-md) 0;
+            color: var(--text-on-dark);
+        }
+
+        .hero p {
+            color: rgba(230, 247, 242, 0.9);
+            font-size: 18px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Support Cards */
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .support-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .support-card {
+            background: var(--surface);
+            border: 1px solid rgba(15, 165, 139, 0.1);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            transition: all var(--transition-base);
+        }
+
+        .support-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .support-card h2 {
+            margin-top: 0;
+            color: var(--text);
+        }
+
+        .support-card p {
+            color: var(--muted);
+            margin-bottom: var(--space-md);
+        }
+
+        .support-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .support-list li {
+            margin-bottom: var(--space-md);
+            color: var(--muted);
+        }
+
+        .support-list a {
+            color: var(--primary-500);
+            font-weight: 600;
+            transition: color var(--transition-base);
+        }
+
+        .support-list a:hover {
+            color: var(--primary-700);
+        }
+
+        .response-indicator {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-lg);
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(15, 165, 139, 0.1);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .response-indicator strong {
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="/" class="logo">
+                <span class="logo-mark">👁️</span>
+                <span>CalEye</span>
+            </a>
+
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/static/features.html">Features</a></li>
+                <li><a href="/static/privacy.html">Privacy</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#" class="btn btn--primary btn--small">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav-menu">
+        <ul class="nav-menu-items">
+            <li><a href="/">Home</a></li>
+            <li><a href="/static/features.html">Features</a></li>
+            <li><a href="/static/how-it-works.html">How It Works</a></li>
+            <li><a href="/static/contact.html">Support</a></li>
+        </ul>
+    </div>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-up">
+                    <h1>Contact & Support</h1>
+                    <p>Need help with food scan results, app behavior, or policy questions? Our support team is here to assist.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUPPORT CONTENT -->
+        <section style="background: var(--bg); padding: var(--space-2xl) 0;">
+            <div class="container">
+                <div class="support-grid">
+                    <div class="support-card fade-left">
+                        <h2>📧 How to Reach Us</h2>
+                        <p>We read and respond to all inquiries. Choose the best option for your question:</p>
+                        <ul class="support-list">
+                            <li>
+                                <strong>General Support:</strong><br>
+                                <a href="mailto:support@caleye.app">support@caleye.app</a>
+                            </li>
+                            <li>
+                                <strong>Business & Partnerships:</strong><br>
+                                <a href="mailto:hello@caleye.app">hello@caleye.app</a>
+                            </li>
+                            <li>
+                                <strong>Privacy Questions:</strong><br>
+                                <a href="mailto:privacy@caleye.app">privacy@caleye.app</a>
+                            </li>
+                        </ul>
+                        <div class="response-indicator">
+                            ⏱️ Typical response: <strong>1-2 business days</strong>
+                        </div>
+                    </div>
+
+                    <div class="support-card fade-right">
+                        <h2>📋 What to Include</h2>
+                        <p>Help us assist you faster by including:</p>
+                        <ul class="support-list">
+                            <li>✓ A clear description of your issue or question</li>
+                            <li>✓ Your platform (iOS, Android, or Web)</li>
+                            <li>✓ App version (found in Settings)</li>
+                            <li>✓ Steps to reproduce the issue</li>
+                            <li>✓ Screenshots if available</li>
+                            <li>✓ The food image (if it's a recognition issue)</li>
+                        </ul>
+                    </div>
+
+                    <div class="support-card fade-left">
+                        <h2>📊 Common Topics</h2>
+                        <ul class="support-list">
+                            <li>
+                                <strong>Scan Accuracy:</strong> How accurate is food recognition?
+                            </li>
+                            <li>
+                                <strong>Offline Mode:</strong> How does offline syncing work?
+                            </li>
+                            <li>
+                                <strong>Data Export:</strong> How do I export my nutrition logs?
+                            </li>
+                            <li>
+                                <strong>Account Issues:</strong> How do I reset my password?
+                            </li>
+                            <li>
+                                <strong>iOS Availability:</strong> When is the iOS app coming?
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="support-card fade-right">
+                        <h2>🔗 Policy Links</h2>
+                        <p>For compliance, app store guidelines, and legal reference:</p>
+                        <ul class="support-list">
+                            <li>
+                                <a href="/static/privacy.html">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="/static/contact.html">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="/">CalEye Home</a>
+                            </li>
+                        </ul>
+                        <p style="font-size: 13px; margin-top: var(--space-lg); color: var(--muted);">
+                            Use this page URL as your official support link for app store verification.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="background: var(--surface); padding: var(--space-2xl) 0;">
+            <div class="container text-center">
+                <h2 class="fade-up">Have a specific question?</h2>
+                <p class="fade-up" style="margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Email us directly at <strong style="color: var(--primary-500);">support@caleye.app</strong> and we'll get back to you shortly.
+                </p>
+                <a href="mailto:support@caleye.app" class="btn btn--primary fade-up">Send Email</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p class="footer-title">CalEye</p>
+                    <p style="color: var(--text-on-dark);">AI-powered nutrition tracking for everyone</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="/static/features.html" class="footer-link">Features</a>
+                    <a href="/static/how-it-works.html" class="footer-link">How It Works</a>
+                    <a href="/static/privacy.html" class="footer-link">Privacy Policy</a>
+                </div>
+            </div>
+            <p class="footer-bottom">&copy; 2025 CalEye. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/static/scripts/main.js"></script>
+    <script src="/static/scripts/smoothscroll.js"></script>
+</body>
+</html>

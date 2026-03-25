@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CalEye - AI-powered food calorie tracking. Just snap a photo and track your nutrition instantly.">
+    <meta name="keywords" content="calorie tracking, food recognition, AI nutrition, food scanner">
+    <meta name="theme-color" content="#0FA58B">
+
+    <title>CalEye - AI-Powered Calorie Tracking</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..150,100..700;1,9..150,100..700&family=Fraunces:opsz,wght@9..144,400..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/components.css">
+    <link rel="stylesheet" href="/static/styles/animations.css">
+
+    <style>
+        /* Section padding utilities for responsive design */
+        .section-padded {
+            padding: var(--space-lg) 0;
+        }
+
+        @media (min-width: 768px) {
+            .section-padded {
+                padding: var(--space-2xl) 0;
+            }
+        }
+
+        .section-padded-lg {
+            padding: var(--space-xl) 0;
+        }
+
+        @media (min-width: 768px) {
+            .section-padded-lg {
+                padding: var(--space-2xl) 0;
+            }
+        }
+        .features-section {
+            background: var(--bg);
+        }
+
+        /* Responsive Text */
+        p {
+            font-size: clamp(14px, 3.5vw, 16px);
+        }
+
+        .step p {
+            font-size: clamp(13px, 2.5vw, 15px);
+        }
+
+        /* Page-specific styles */
+        .hero {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0a2925 100%);
+            color: var(--text-on-dark);
+            padding-top: 70px;
+            padding-bottom: var(--space-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding-top: 80px;
+                padding-bottom: var(--space-2xl);
+            }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -300px;
+            right: -150px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(51, 221, 176, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        @media (min-width: 768px) {
+            .hero::before {
+                top: -200px;
+                right: -100px;
+                width: 500px;
+                height: 500px;
+                background: radial-gradient(circle, rgba(51, 221, 176, 0.15) 0%, transparent 70%);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-xl);
+            }
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        @media (min-width: 768px) {
+            .hero-text {
+                gap: var(--space-lg);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(1.75rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-title .highlight {
+            color: var(--primary-dark);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(15px, 4vw, 18px);
+            line-height: 1.8;
+            color: rgba(230, 247, 242, 0.9);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--space-sm);
+            flex-direction: column;
+            margin-top: var(--space-md);
+        }
+
+        @media (min-width: 480px) {
+            .hero-cta {
+                flex-direction: row;
+                gap: var(--space-md);
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero-cta {
+                margin-top: var(--space-lg);
+            }
+        }
+
+        .hero-cta > div {
+            flex: 1;
+            min-width: 160px;
+        }
+
+        @media (min-width: 480px) {
+            .hero-cta > div {
+                flex: initial;
+            }
+        }
+
+        .cta-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-dark);
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        /* Phone Mockup */
+        .phone-mockup-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: var(--space-lg);
+        }
+
+        @media (min-width: 1024px) {
+            .phone-mockup-wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .phone-mockup {
+            position: relative;
+            width: 220px;
+            height: 440px;
+            background: #000;
+            border-radius: 36px;
+            padding: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            animation: float 3s ease-in-out infinite;
+            border: 6px solid #1a1a1a;
+        }
+
+        @media (min-width: 480px) {
+            .phone-mockup {
+                width: 260px;
+                height: 520px;
+                border-radius: 40px;
+                padding: 12px;
+                border: 8px solid #1a1a1a;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .phone-mockup {
+                width: 280px;
+                height: 560px;
+                border-radius: 40px;
+                padding: 12px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        .phone-mockup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 20px;
+            background: #000;
+            border-radius: 0 0 16px 16px;
+            z-index: 10;
+        }
+
+        @media (min-width: 480px) {
+            .phone-mockup::before {
+                width: 140px;
+                height: 24px;
+                border-radius: 0 0 18px 18px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .phone-mockup::before {
+                width: 150px;
+                height: 25px;
+                border-radius: 0 0 20px 20px;
+            }
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @media (min-width: 480px) {
+            .phone-screen {
+                border-radius: 34px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .phone-screen {
+                border-radius: 36px;
+            }
+        }
+
+        .phone-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .phone-floating-card {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface);
+            border-radius: 10px;
+            padding: 10px 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text);
+            z-index: 20;
+            animation: float 4s ease-in-out infinite;
+            animation-delay: 0.5s;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 480px) {
+            .phone-floating-card {
+                bottom: 20px;
+                border-radius: 12px;
+                padding: 12px 20px;
+                font-size: 12px;
+            }
+        }
+
+        .phone-floating-card .icon {
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        /* Social Proof Bar */
+        .social-proof {
+            background: var(--surface);
+            padding: var(--space-lg) 0;
+            border-top: 1px solid rgba(15, 165, 139, 0.1);
+            border-bottom: 1px solid rgba(15, 165, 139, 0.1);
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .social-proof {
+                padding: var(--space-xl) 0;
+            }
+        }
+
+        .marquee-content-inner {
+            display: inline-flex;
+            gap: var(--space-md);
+            white-space: nowrap;
+            animation: marquee 30s linear infinite;
+        }
+
+        @media (min-width: 768px) {
+            .marquee-content-inner {
+                gap: var(--space-lg);
+            }
+        }
+
+        .social-proof:hover .marquee-content-inner {
+            animation-play-state: paused;
+        }
+
+        .proof-item {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-weight: 600;
+            color: var(--text);
+            font-size: 12px;
+            min-width: max-content;
+        }
+
+        @media (min-width: 480px) {
+            .proof-item {
+                font-size: 13px;
+                gap: var(--space-sm);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .proof-item {
+                font-size: 14px;
+            }
+        }
+
+        .proof-item strong {
+            color: var(--primary-500);
+        }
+
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+
+        @media (min-width: 480px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-lg);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-xl);
+            }
+        }
+
+        /* How It Works */
+        .how-it-works-section {
+            background: linear-gradient(180deg, #f0f9f5 0%, var(--bg) 100%);
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .steps-container {
+                gap: var(--space-2xl);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .steps-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .steps-container::before {
+                content: '';
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, var(--primary-500) 20%, var(--primary-500) 80%, transparent);
+                border-top: 2px dashed var(--primary-500);
+                pointer-events: none;
+            }
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            font-size: 60px;
+            font-weight: 900;
+            color: rgba(15, 165, 139, 0.05);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            line-height: 1;
+        }
+
+        @media (min-width: 768px) {
+            .step-number {
+                font-size: 80px;
+                top: -20px;
+            }
+        }
+
+        .step-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-700) 100%);
+            border-radius: 50%;
+            margin: 0 auto var(--space-lg);
+            font-size: 36px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 24px rgba(15, 165, 139, 0.15);
+        }
+
+        @media (min-width: 768px) {
+            .step-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 40px;
+                box-shadow: 0 10px 30px rgba(15, 165, 139, 0.2);
+            }
+        }
+
+        .step h3 {
+            margin: 0 0 var(--space-sm) 0;
+            color: var(--text);
+            font-size: 18px;
+        }
+
+        @media (min-width: 768px) {
+            .step h3 {
+                margin: 0 0 var(--space-md) 0;
+                font-size: 20px;
+            }
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            .step p {
+                font-size: 15px;
+            }
+        }
+
+        /* Screenshot Gallery */
+        .gallery-section {
+            background: var(--surface);
+        }
+
+        .gallery-container {
+            overflow-x: auto;
+            padding-bottom: var(--space-md);
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            gap: var(--space-md);
+            padding: var(--space-md) var(--space-sm);
+            width: max-content;
+        }
+
+        @media (min-width: 480px) {
+            .gallery-scroll {
+                gap: var(--space-lg);
+                padding: var(--space-lg) 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-scroll {
+                gap: var(--space-lg);
+                padding: var(--space-lg) 0;
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--primary-500);
+            color: white;
+            padding: 5px 10px;
+            border-radius: var(--radius-full);
+            font-size: 11px;
+            font-weight: 600;
+            z-index: 5;
+        }
+
+        @media (min-width: 480px) {
+            .gallery-label {
+                bottom: 12px;
+                left: 12px;
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-xl);
+            }
+        }
+
+        /* Download CTA */
+        .download-cta-section {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0a2925 100%);
+            color: var(--text-on-dark);
+            position: relative;
+            overflow: hidden;
+            padding: var(--space-xl) 0;
+        }
+
+        @media (min-width: 768px) {
+            .download-cta-section {
+                padding: var(--space-2xl) 0;
+            }
+        }
+
+        .download-cta-section::before {
+            content: '';
+            position: absolute;
+            top: -300px;
+            right: -300px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(51, 221, 176, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        @media (min-width: 768px) {
+            .download-cta-section::before {
+                width: 600px;
+                height: 600px;
+                background: radial-gradient(circle, rgba(51, 221, 176, 0.1) 0%, transparent 70%);
+            }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            color: var(--text-on-dark);
+            margin-bottom: var(--space-md);
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+
+        @media (min-width: 768px) {
+            .cta-content h2 {
+                margin-bottom: var(--space-lg);
+            }
+        }
+
+        .cta-content p {
+            color: rgba(230, 247, 242, 0.9);
+            font-size: clamp(14px, 3vw, 18px);
+            margin-bottom: var(--space-lg);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .cta-content p {
+                margin-bottom: var(--space-xl);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            flex-direction: column;
+        }
+
+        @media (min-width: 480px) {
+            .cta-buttons {
+                flex-direction: row;
+                gap: var(--space-md);
+                flex-wrap: wrap;
+            }
+        }
+
+        .cta-buttons .store-btn {
+            width: 100%;
+        }
+
+        @media (min-width: 480px) {
+            .cta-buttons .store-btn {
+                width: auto;
+            }
+        }
+
+        /* Scroll animations */
+        section {
+            scroll-margin-top: 70px;
+        }
+
+        @media (min-width: 768px) {
+            section {
+                scroll-margin-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="/" class="logo">
+                <span class="logo-mark">👁️</span>
+                <span>CalEye</span>
+            </a>
+
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="/static/features.html">Features</a></li>
+                <li><a href="/static/how-it-works.html">How It Works</a></li>
+                <li><a href="/static/pricing.html">Pricing</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#" class="btn btn--primary btn--small">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav-menu">
+        <ul class="nav-menu-items">
+            <li><a href="/static/features.html">Features</a></li>
+            <li><a href="/static/how-it-works.html">How It Works</a></li>
+            <li><a href="/static/pricing.html">Pricing</a></li>
+            <li><a href="/static/privacy.html">Privacy Policy</a></li>
+        </ul>
+    </div>
+
+    <main id="main">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text fade-left">
+                        <h1 class="hero-title">
+                            Snap a photo. <span class="highlight">Know every calorie.</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            CalEye uses AI to instantly identify your food and log nutrition — no manual entry, no guesswork.
+                        </p>
+
+                        <div class="hero-cta">
+                            <div>
+                                <a href="#" class="store-btn store-btn--google">
+                                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 3L3 15l12 12 12-12z" fill="currentColor"/>
+                                    </svg>
+                                    Get it on Google Play
+                                </a>
+                                <p class="cta-label">✓ Available now</p>
+                            </div>
+                            <div class="store-btn-wrapper">
+                                <button class="store-btn store-btn--apple" disabled aria-label="Download on App Store (coming soon)">
+                                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 25c-2.2 0-4-1.8-4-4V9c0-2.2 1.8-4 4-4h14c2.2 0 4 1.8 4 4v12c0 2.2-1.8 4-4 4H8z" fill="currentColor" opacity="0.8"/>
+                                        <path d="M15 5c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z" fill="white"/>
+                                    </svg>
+                                    Download on App Store
+                                </button>
+                                <div class="coming-soon-chip">Coming Soon</div>
+                                <div class="tooltip">iOS version launching soon!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-mockup-wrapper fade-right">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Salad bowl - food tracking example" loading="lazy">
+                            </div>
+                            <div class="phone-floating-card">
+                                <span class="icon">✓</span>
+                                2,847 calories tracked today
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL PROOF BAR -->
+        <section class="social-proof">
+            <div class="marquee">
+                <div class="marquee-content-inner">
+                    <div class="proof-item">⭐⭐⭐⭐⭐ <strong>Loved by 10,000+ users</strong></div>
+                    <div class="proof-item">🤖 <strong>AI-powered</strong></div>
+                    <div class="proof-item">🔒 <strong>Privacy-first</strong></div>
+                    <div class="proof-item">⚡ <strong>Free to start</strong></div>
+                    <div class="proof-item">⭐⭐⭐⭐⭐ <strong>Loved by 10,000+ users</strong></div>
+                    <div class="proof-item">🤖 <strong>AI-powered</strong></div>
+                    <div class="proof-item">🔒 <strong>Privacy-first</strong></div>
+                    <div class="proof-item">⚡ <strong>Free to start</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section section-padded">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>Everything you need to eat smarter</h2>
+                    <p>Powerful features designed to make nutrition tracking effortless and accurate.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="card stagger-item fade-up">
+                        <div class="card-icon">📸</div>
+                        <h3>Instant AI Recognition</h3>
+                        <p>Point your camera at any meal. CalEye identifies ingredients and calculates macros in under 2 seconds.</p>
+                    </div>
+
+                    <div class="card stagger-item fade-up">
+                        <div class="card-icon orange">📊</div>
+                        <h3>Detailed Nutrition Breakdown</h3>
+                        <p>Calories, protein, carbs, fats, fiber — all logged automatically. Visual charts make tracking effortless.</p>
+                    </div>
+
+                    <div class="card stagger-item fade-up">
+                        <div class="card-icon blue">🎯</div>
+                        <h3>Smart Daily Goals</h3>
+                        <p>Set personalized calorie and macro targets. CalEye tracks your progress and nudges you toward your goals.</p>
+                    </div>
+
+                    <div class="card stagger-item fade-up">
+                        <div class="card-icon success">🕐</div>
+                        <h3>Meal History Timeline</h3>
+                        <p>Every meal logged with timestamp and photo. Review your eating habits at a glance.</p>
+                    </div>
+
+                    <div class="card stagger-item fade-up">
+                        <div class="card-icon">🔒</div>
+                        <h3>Privacy First</h3>
+                        <p>Your food photos never leave your device for storage. AI processing is ephemeral and secure.</p>
+                    </div>
+
+                    <div class="card stagger-item fade-up">
+                        <div class="card-icon blue">⚡</div>
+                        <h3>Works Offline</h3>
+                        <p>Core features work without internet. Sync all your data when connected.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>Three steps to smarter eating</h2>
+                    <p>CalEye makes nutrition tracking as simple as taking a photo.</p>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step fade-left" style="animation-delay: 0ms;">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">📸</div>
+                        <h3>Snap</h3>
+                        <p>Take a photo of your meal using CalEye. Works with any food, any plate.</p>
+                    </div>
+
+                    <div class="step fade-up" style="animation-delay: 100ms;">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">⚙️</div>
+                        <h3>Analyze</h3>
+                        <p>AI identifies food and nutrition instantly. Results in under 2 seconds.</p>
+                    </div>
+
+                    <div class="step fade-right" style="animation-delay: 200ms;">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">✓</div>
+                        <h3>Track</h3>
+                        <p>Log it automatically and monitor your daily progress toward your goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREENSHOT GALLERY -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>See CalEye in action</h2>
+                    <p>Swipe through real app screenshots showcasing AI accuracy.</p>
+                </div>
+
+                <div class="gallery-container">
+                    <div class="gallery-scroll">
+                        <div class="gallery-item fade-up">
+                            <div class="phone-mockup" style="animation: none;">
+                                <div class="phone-screen">
+                                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=300&q=80" alt="App screenshot - food scanning" loading="lazy">
+                                </div>
+                                <div class="gallery-label">🤖 AI Scanning</div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item fade-up">
+                            <div class="phone-mockup" style="animation: none;">
+                                <div class="phone-screen">
+                                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=300&q=80" alt="App screenshot - nutrition results" loading="lazy">
+                                </div>
+                                <div class="gallery-label">✓ Nutrition Found</div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item fade-up">
+                            <div class="phone-mockup" style="animation: none;">
+                                <div class="phone-screen">
+                                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&q=80" alt="App screenshot - pizza recognition" loading="lazy">
+                                </div>
+                                <div class="gallery-label">⚡ Goals Updated</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section-padded" style="background: var(--bg);">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>Loved by users worldwide</h2>
+                    <p>Real stories from people who transformed their health with CalEye.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card stagger-item fade-up">
+                        <div class="quote-mark">"</div>
+                        <p class="testimonial-text">I lost 8kg in 3 months just by being aware of what I eat. CalEye made it effortless.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-author-name">Sarah K.</span>
+                                <span class="testimonial-rating">⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card stagger-item fade-up">
+                        <div class="quote-mark">"</div>
+                        <p class="testimonial-text">Finally an app that doesn't make me manually search for every ingredient. The AI is scary accurate.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-author-name">Ahmed R.</span>
+                                <span class="testimonial-rating">⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card stagger-item fade-up">
+                        <div class="quote-mark">"</div>
+                        <p class="testimonial-text">The photo recognition even got my mom's home-cooked biryani right. I was shocked.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-author-name">Priya M.</span>
+                                <span class="testimonial-rating">⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOWNLOAD CTA -->
+        <section class="download-cta-section" style="padding: var(--space-2xl) 0;">
+            <div class="container">
+                <div class="cta-content fade-up">
+                    <h2>Start tracking in 30 seconds</h2>
+                    <p>Free to download. No account required to start. Just open and snap.</p>
+
+                    <div class="cta-buttons">
+                        <a href="#" class="store-btn store-btn--google">
+                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 3L3 15l12 12 12-12z" fill="currentColor"/>
+                            </svg>
+                            Get it on Google Play
+                        </a>
+                        <div class="store-btn-wrapper">
+                            <button class="store-btn store-btn--apple" disabled>
+                                <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 25c-2.2 0-4-1.8-4-4V9c0-2.2 1.8-4 4-4h14c2.2 0 4 1.8 4 4v12c0 2.2-1.8 4-4 4H8z" fill="currentColor" opacity="0.8"/>
+                                    <path d="M15 5c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z" fill="white"/>
+                                </svg>
+                                Download on App Store
+                            </button>
+                            <div class="coming-soon-chip">Coming Soon</div>
+                        </div>
+                    </div>
+
+                    <p class="text-muted" style="margin-top: var(--space-lg); font-size: 13px;">iOS App Store launch coming soon.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p class="footer-title">CalEye</p>
+                    <p style="color: var(--text-on-dark);">AI-powered nutrition tracking for everyone</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="/static/features.html" class="footer-link">Features</a>
+                    <a href="/static/how-it-works.html" class="footer-link">How It Works</a>
+                    <a href="/static/pricing.html" class="footer-link">Pricing</a>
+                    <a href="/static/privacy.html" class="footer-link">Privacy Policy</a>
+                </div>
+            </div>
+            <p class="footer-bottom">&copy; 2025 CalEye. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/static/scripts/main.js"></script>
+    <script src="/static/scripts/smoothscroll.js"></script>
+</body>
+</html>

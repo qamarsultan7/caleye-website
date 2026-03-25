@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore CalEye's powerful features for AI-powered food tracking and nutrition insights.">
+    <meta name="title" content="Features - CalEye">
+
+    <title>Features - CalEye</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..150,100..700;1,9..150,100..700&family=Fraunces:opsz,wght@9..144,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/components.css">
+    <link rel="stylesheet" href="/static/styles/animations.css">
+
+    <style>
+        .hero {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0a2925 100%);
+            color: var(--text-on-dark);
+            padding-top: 80px;
+            padding-bottom: var(--space-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(51, 221, 176, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .hero h1 {
+            margin: 0 0 var(--space-md) 0;
+            color: var(--text-on-dark);
+        }
+
+        .hero p {
+            color: rgba(230, 247, 242, 0.9);
+            font-size: 18px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Feature Section */
+        .feature-full {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+            padding: var(--space-2xl) 0;
+        }
+
+        @media (min-width: 1024px) {
+            .feature-full {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature-full:nth-child(even) {
+                direction: rtl;
+            }
+
+            .feature-full:nth-child(even) > * {
+                direction: ltr;
+            }
+        }
+
+        .feature-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .feature-content h2 {
+            margin-top: 0;
+        }
+
+        .feature-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-lg) 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+            align-items: flex-start;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--primary-500);
+            font-weight: 700;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: -2px;
+        }
+
+        .feature-divider {
+            height: 1px;
+            background: rgba(15, 165, 139, 0.1);
+            margin: var(--space-2xl) 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="/" class="logo">
+                <span class="logo-mark">👁️</span>
+                <span>CalEye</span>
+            </a>
+
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="/static/features.html">Features</a></li>
+                <li><a href="/static/how-it-works.html">How It Works</a></li>
+                <li><a href="/static/pricing.html">Pricing</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#" class="btn btn--primary btn--small">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav-menu">
+        <ul class="nav-menu-items">
+            <li><a href="/">Home</a></li>
+            <li><a href="/static/features.html">Features</a></li>
+            <li><a href="/static/how-it-works.html">How It Works</a></li>
+            <li><a href="/static/pricing.html">Pricing</a></li>
+        </ul>
+    </div>
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-up">
+                    <h1>Packed with features. Powered by AI.</h1>
+                    <p>Everything you need to transform your nutrition habits and track your progress with zero friction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES CONTENT -->
+        <section style="padding: var(--space-xl) 0;">
+            <div class="container">
+                <div class="feature-full fade-left">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=80" alt="AI food recognition in action" loading="lazy">
+                    </div>
+                    <div class="feature-content">
+                        <h2>Instant AI Recognition</h2>
+                        <p>Point your camera at any meal. CalEye's advanced AI recognizes food items in under 2 seconds, from simple salads to complex home-cooked dishes.</p>
+                        <ul class="feature-list">
+                            <li>Recognizes 5000+ food types globally</li>
+                            <li>Works with mixed dishes and cuisines</li>
+                            <li>99.2% accuracy on common foods</li>
+                            <li>Continuously improves with usage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-divider"></div>
+
+                <div class="feature-full fade-right">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&q=80" alt="Detailed nutrition breakdown" loading="lazy">
+                    </div>
+                    <div class="feature-content">
+                        <h2>Detailed Nutrition Breakdown</h2>
+                        <p>Get a complete breakdown of every meal instantly. CalEye shows you calories, macronutrients, micronutrients, and more — all in an easy-to-read format.</p>
+                        <ul class="feature-list">
+                            <li>Calories, protein, carbs, fat, fiber</li>
+                            <li>Micronutrients (sodium, potassium, etc.)</li>
+                            <li>Serving size estimation</li>
+                            <li>Easy editing if needed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-divider"></div>
+
+                <div class="feature-full fade-left">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1516383740770-fbdea19cf0fa?w=500&q=80" alt="Meal history and tracking" loading="lazy">
+                    </div>
+                    <div class="feature-content">
+                        <h2>Meal History Timeline</h2>
+                        <p>Every meal you log is saved with a timestamp, photo, and full nutrition data. Review your eating patterns and spot trends at a glance.</p>
+                        <ul class="feature-list">
+                            <li>Complete meal history with photos</li>
+                            <li>Filter by date, meal type, food</li>
+                            <li>Weekly and monthly summaries</li>
+                            <li>Export your data anytime</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-divider"></div>
+
+                <div class="feature-full fade-right">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Smart goal tracking" loading="lazy">
+                    </div>
+                    <div class="feature-content">
+                        <h2>Smart Goal Tracking</h2>
+                        <p>Set personalized calorie and macro targets based on your goals. CalEye tracks your progress throughout the day and nudges you when you're nearing limits.</p>
+                        <ul class="feature-list">
+                            <li>Custom daily calorie targets</li>
+                            <li>Macro distribution goals (IIFYM)</li>
+                            <li>Real-time progress visualization</li>
+                            <li>Weekly insights and recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-divider"></div>
+
+                <div class="feature-full fade-left">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1505576399279-565b52ce32f0?w=500&q=80" alt="Privacy and security" loading="lazy">
+                    </div>
+                    <div class="feature-content">
+                        <h2>Privacy First</h2>
+                        <p>Your food photos never leave your device for permanent storage. All AI processing is ephemeral — we prioritize your privacy above all.</p>
+                        <ul class="feature-list">
+                            <li>On-device processing when possible</li>
+                            <li>No permanent photo storage</li>
+                            <li>End-to-end encrypted sync</li>
+                            <li>Full data export available</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-divider"></div>
+
+                <div class="feature-full fade-right">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1554224311-beee415c15c7?w=500&q=80" alt="Offline mode" loading="lazy">
+                    </div>
+                    <div class="feature-content">
+                        <h2>Works Offline</h2>
+                        <p>Core features work without an internet connection. Your data syncs automatically when you reconnect, keeping you productive anywhere.</p>
+                        <ul class="feature-list">
+                            <li>Full tracking functionality offline</li>
+                            <li>Automatic sync when online</li>
+                            <li>No subscription required</li>
+                            <li>Access your history anytime</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="background: var(--bg); padding: var(--space-2xl) 0;">
+            <div class="container text-center">
+                <h2 class="fade-up">Ready to experience smarter nutrition tracking?</h2>
+                <p class="lead fade-up" style="margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Download CalEye free and start tracking your meals instantly.
+                </p>
+                <div class="flex-center gap-lg fade-up" style="flex-wrap: wrap;">
+                    <a href="#" class="store-btn store-btn--google">
+                        <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 3L3 15l12 12 12-12z" fill="currentColor"/>
+                        </svg>
+                        Get it on Google Play
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p class="footer-title">CalEye</p>
+                    <p style="color: var(--text-on-dark);">AI-powered nutrition tracking for everyone</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="/static/features.html" class="footer-link">Features</a>
+                    <a href="/static/how-it-works.html" class="footer-link">How It Works</a>
+                    <a href="/static/pricing.html" class="footer-link">Pricing</a>
+                    <a href="/static/privacy.html" class="footer-link">Privacy Policy</a>
+                </div>
+            </div>
+            <p class="footer-bottom">&copy; 2025 CalEye. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/static/scripts/main.js"></script>
+    <script src="/static/scripts/smoothscroll.js"></script>
+</body>
+</html>
