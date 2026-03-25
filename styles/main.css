@@ -345,6 +345,10 @@ ol ol {
   transition: all var(--transition-fast);
 }
 
+.navbar.scrolled .hamburger span {
+  background-color: var(--text);
+}
+
 @media (min-width: 768px) {
   .hamburger span {
     background-color: var(--text);
