@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..150,100..700;1,9..150,100..700&family=Fraunces:opsz,wght@9..144,400..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/static/styles/main.css">
-    <link rel="stylesheet" href="/static/styles/components.css">
-    <link rel="stylesheet" href="/static/styles/animations.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/animations.css">
 
     <style>
         /* Section padding utilities for responsive design */
@@ -503,69 +503,6 @@
             }
         }
 
-        /* Screenshot Gallery */
-        .gallery-section {
-            background: var(--surface);
-        }
-
-        .gallery-container {
-            overflow-x: auto;
-            padding-bottom: var(--space-md);
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-
-        .gallery-scroll {
-            display: flex;
-            gap: var(--space-md);
-            padding: var(--space-md) var(--space-sm);
-            width: max-content;
-        }
-
-        @media (min-width: 480px) {
-            .gallery-scroll {
-                gap: var(--space-lg);
-                padding: var(--space-lg) 0;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .gallery-scroll {
-                gap: var(--space-lg);
-                padding: var(--space-lg) 0;
-            }
-        }
-
-        .gallery-item {
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .gallery-label {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            background: var(--primary-500);
-            color: white;
-            padding: 5px 10px;
-            border-radius: var(--radius-full);
-            font-size: 11px;
-            font-weight: 600;
-            z-index: 5;
-        }
-
-        @media (min-width: 480px) {
-            .gallery-label {
-                bottom: 12px;
-                left: 12px;
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-        }
-
         /* Testimonials */
         .testimonials-grid {
             display: grid;
@@ -586,12 +523,12 @@
             color: var(--text-on-dark);
             position: relative;
             overflow: hidden;
-            padding: var(--space-xl) 0;
+            padding: var(--space-lg) 0;
         }
 
         @media (min-width: 768px) {
             .download-cta-section {
-                padding: var(--space-2xl) 0;
+                padding: var(--space-xl) 0;
             }
         }
 
@@ -686,12 +623,11 @@
     </style>
 </head>
 <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-inner">
-            <a href="/" class="logo">
+            <a href="index.html" class="logo">
                 <span class="logo-mark">👁️</span>
                 <span>CalEye</span>
             </a>
@@ -703,9 +639,9 @@
             </button>
 
             <ul class="nav-links">
-                <li><a href="/static/features.html">Features</a></li>
-                <li><a href="/static/how-it-works.html">How It Works</a></li>
-                <li><a href="/static/pricing.html">Pricing</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
             </ul>
 
             <div class="nav-cta">
@@ -717,10 +653,10 @@
     <!-- Mobile Menu -->
     <div class="nav-menu">
         <ul class="nav-menu-items">
-            <li><a href="/static/features.html">Features</a></li>
-            <li><a href="/static/how-it-works.html">How It Works</a></li>
-            <li><a href="/static/pricing.html">Pricing</a></li>
-            <li><a href="/static/privacy.html">Privacy Policy</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
         </ul>
     </div>
 
@@ -873,47 +809,6 @@
             </div>
         </section>
 
-        <!-- SCREENSHOT GALLERY -->
-        <section class="gallery-section">
-            <div class="container">
-                <div class="section-title fade-up">
-                    <h2>See CalEye in action</h2>
-                    <p>Swipe through real app screenshots showcasing AI accuracy.</p>
-                </div>
-
-                <div class="gallery-container">
-                    <div class="gallery-scroll">
-                        <div class="gallery-item fade-up">
-                            <div class="phone-mockup" style="animation: none;">
-                                <div class="phone-screen">
-                                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=300&q=80" alt="App screenshot - food scanning" loading="lazy">
-                                </div>
-                                <div class="gallery-label">🤖 AI Scanning</div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item fade-up">
-                            <div class="phone-mockup" style="animation: none;">
-                                <div class="phone-screen">
-                                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=300&q=80" alt="App screenshot - nutrition results" loading="lazy">
-                                </div>
-                                <div class="gallery-label">✓ Nutrition Found</div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item fade-up">
-                            <div class="phone-mockup" style="animation: none;">
-                                <div class="phone-screen">
-                                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&q=80" alt="App screenshot - pizza recognition" loading="lazy">
-                                </div>
-                                <div class="gallery-label">⚡ Goals Updated</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- TESTIMONIALS -->
         <section class="section-padded" style="background: var(--bg);">
             <div class="container">
@@ -960,7 +855,7 @@
         </section>
 
         <!-- DOWNLOAD CTA -->
-        <section class="download-cta-section" style="padding: var(--space-2xl) 0;">
+        <section class="download-cta-section" style="padding: var(--space-xl) 0; margin-bottom: 0;">
             <div class="container">
                 <div class="cta-content fade-up">
                     <h2>Start tracking in 30 seconds</h2>
@@ -1000,11 +895,12 @@
                     <p style="color: var(--text-on-dark);">AI-powered nutrition tracking for everyone</p>
                 </div>
                 <div class="footer-links">
-                    <a href="/" class="footer-link">Home</a>
-                    <a href="/static/features.html" class="footer-link">Features</a>
-                    <a href="/static/how-it-works.html" class="footer-link">How It Works</a>
-                    <a href="/static/pricing.html" class="footer-link">Pricing</a>
-                    <a href="/static/privacy.html" class="footer-link">Privacy Policy</a>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="features.html" class="footer-link">Features</a>
+                    <a href="how-it-works.html" class="footer-link">How It Works</a>
+                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="terms.html" class="footer-link">Terms</a>
                 </div>
             </div>
             <p class="footer-bottom">&copy; 2025 CalEye. All rights reserved.</p>
@@ -1012,7 +908,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/static/scripts/main.js"></script>
-    <script src="/static/scripts/smoothscroll.js"></script>
+    <script src="./scripts/components.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/smoothscroll.js"></script>
 </body>
 </html>

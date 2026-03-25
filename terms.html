@@ -3,24 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for CalEye - the AI-powered food calorie tracking application.">
+    <meta name="title" content="Terms of Service - CalEye">
     <title>CalEye Terms of Service</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..150,100..700;1,9..150,100..700&family=Fraunces:opsz,wght@9..144,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0a2925 100%);
+            color: var(--text-on-dark);
+            padding-top: 100px;
+            padding-bottom: var(--space-2xl);
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            margin: 0 0 var(--space-md) 0;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .meta-note {
+            display: block;
+            font-size: 13px;
+            color: rgba(230, 247, 242, 0.7);
+            margin-top: var(--space-md);
+        }
+
+        .legal-content {
+            background: var(--bg);
+            padding: var(--space-2xl) 0;
+        }
+
+        .legal-card {
+            background: var(--surface);
+            border: 1px solid rgba(15, 165, 139, 0.1);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .legal-card h2 {
+            margin-top: 0;
+            color: var(--primary-500);
+        }
+
+        .legal-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-md) 0;
+        }
+
+        .legal-list li {
+            margin-bottom: var(--space-md);
+            color: var(--muted);
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .legal-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-500);
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-inner">
-            <a href="/" class="logo">
-                <span class="logo-mark"></span>
+            <a href="index.html" class="logo">
+                <span class="logo-mark">👁️</span>
                 <span>CalEye</span>
             </a>
+
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/static/privacy.html">Privacy</a></li>
-                <li><a href="/static/terms.html">Terms</a></li>
-                <li><a href="/static/contact.html">Support</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
             </ul>
+
+            <div class="nav-cta">
+                <a href="#" class="btn btn--primary btn--small">Download Free</a>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav-menu">
+        <ul class="nav-menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="contact.html">Support</a></li>
+        </ul>
+    </div>
 
     <section class="page-hero">
         <div class="container">
@@ -54,7 +146,7 @@
 
             <article class="legal-card">
                 <h2>4. Privacy</h2>
-                <p>Your use of CalEye is also governed by the <a class="inline-link" href="/static/privacy.html">Privacy Policy</a>.</p>
+                <p>Your use of CalEye is also governed by the <a class="inline-link" href="privacy.html">Privacy Policy</a>.</p>
             </article>
 
             <article class="legal-card">
@@ -74,27 +166,33 @@
 
             <article class="legal-card">
                 <h2>8. Contact</h2>
-                <p>Questions regarding these Terms can be sent through our <a class="inline-link" href="/static/contact.html">Support page</a> or by email at <a class="inline-link" href="mailto:support@caleye.app">support@caleye.app</a>.</p>
+                <p>Questions regarding these Terms can be sent through our <a class="inline-link" href="contact.html">Support page</a> or by email at <a class="inline-link" href="mailto:support@caleye.app">support@caleye.app</a>.</p>
             </article>
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- FOOTER -->
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div>
                     <p class="footer-title">CalEye</p>
-                    <p>AI-powered nutrition tracking for everyone</p>
+                    <p style="color: var(--text-on-dark);">AI-powered nutrition tracking for everyone</p>
                 </div>
-                <div>
-                    <a href="/" class="footer-link">Home</a>
-                    <a href="/static/privacy.html" class="footer-link">Privacy Policy</a>
-                    <a href="/static/terms.html" class="footer-link">Terms of Service</a>
-                    <a href="/static/contact.html" class="footer-link">Support</a>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="features.html" class="footer-link">Features</a>
+                    <a href="how-it-works.html" class="footer-link">How It Works</a>
+                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="terms.html" class="footer-link">Terms</a>
                 </div>
             </div>
-            <p class="footer-bottom">&copy; 2026 CalEye. All rights reserved.</p>
+            <p class="footer-bottom">&copy; 2025 CalEye. All rights reserved.</p>
         </div>
     </footer>
+    <script src="./scripts/components.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/smoothscroll.js"></script>
 </body>
 </html>
