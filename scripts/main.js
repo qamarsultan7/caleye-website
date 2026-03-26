@@ -6,12 +6,11 @@
 // NAVBAR SCROLL DETECTION
 // ========================================
 
-const navbar = document.querySelector('.navbar');
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
 // Sticky navbar on scroll
 window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
   if (window.scrollY > 80) {
     navbar.classList.add('scrolled');
   } else {
@@ -23,25 +22,34 @@ window.addEventListener('scroll', () => {
 // MOBILE MENU TOGGLE
 // ========================================
 
-hamburger?.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
+function setMobileMenuState(isOpen) {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
 
-// Close menu when clicking on a link
-const navMenuLinks = document.querySelectorAll('.nav-menu-items a');
-navMenuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-  });
-});
+  if (!hamburger || !navMenu) return;
 
-// Close menu when clicking outside
+  hamburger.classList.toggle('active', isOpen);
+  navMenu.classList.toggle('active', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+}
+
 document.addEventListener('click', (e) => {
-  if (!e.target.closest('.navbar')) {
-    hamburger?.classList.remove('active');
-    navMenu?.classList.remove('active');
+  const hamburger = e.target.closest('.hamburger');
+  const navLink = e.target.closest('.nav-menu-items a');
+
+  if (hamburger) {
+    const isOpen = !hamburger.classList.contains('active');
+    setMobileMenuState(isOpen);
+    return;
+  }
+
+  if (navLink) {
+    setMobileMenuState(false);
+    return;
+  }
+
+  if (!e.target.closest('.navbar') && !e.target.closest('.nav-menu')) {
+    setMobileMenuState(false);
   }
 });
 

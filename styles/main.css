@@ -455,13 +455,13 @@ section {
 footer {
   background-color: var(--surface-dark);
   color: var(--text-on-dark);
-  padding: var(--space-xl) 0 var(--space-lg);
+  padding: var(--space-xl) 0 var(--space-sm);
   margin-top: var(--space-xl);
 }
 
 @media (min-width: 768px) {
   footer {
-    padding: var(--space-2xl) 0 var(--space-lg);
+    padding: var(--space-2xl) 0 var(--space-sm);
     margin-top: var(--space-2xl);
   }
 }
@@ -489,6 +489,11 @@ footer {
   color: var(--primary-dark);
 }
 
+.footer-tagline {
+  color: var(--text-on-dark);
+  margin: 0 0 var(--space-md);
+}
+
 @media (min-width: 768px) {
   .footer-title {
     font-size: 24px;
@@ -499,6 +504,35 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
+}
+
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .download-buttons {
+    flex-direction: row;
+  }
+}
+
+.download-buttons .store-btn {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.download-buttons .store-btn img {
+  width: 170px;
+  height: auto;
+  display: block;
+}
+
+.footer-downloads {
+  align-items: flex-start;
 }
 
 @media (min-width: 768px) {
@@ -525,7 +559,8 @@ footer {
 
 .footer-bottom {
   text-align: center;
-  padding-top: var(--space-lg);
+  padding-top: var(--space-md);
+  margin-bottom: 0;
   border-top: 1px solid rgba(230, 247, 242, 0.1);
   color: rgba(230, 247, 242, 0.7);
   font-size: 14px;

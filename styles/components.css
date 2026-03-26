@@ -41,6 +41,7 @@
 
 .btn--primary:hover:not(:disabled) {
   background-color: var(--primary-700);
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(15, 165, 139, 0.35);
 }
@@ -52,6 +53,7 @@
 
 .btn--secondary:hover:not(:disabled) {
   background-color: var(--accent-dark);
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -82,6 +84,7 @@
 
 .btn--dark:hover:not(:disabled) {
   background-color: #0a0a0a;
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -150,7 +153,6 @@
 }
 
 .store-btn:hover:not(:disabled) {
-  background-color: #0a0a0a;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -183,8 +185,8 @@
 
 .coming-soon-chip {
   position: absolute;
-  top: -6px;
-  right: -6px;
+  top: 2px;
+  right: 2px;
   background-color: var(--accent);
   color: white;
   padding: 3px 10px;
@@ -193,12 +195,18 @@
   font-weight: 700;
   transform: rotate(-15deg);
   box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+  transition: transform var(--transition-fast);
+  z-index: 10;
+}
+
+.store-btn:hover .coming-soon-chip {
+  transform: rotate(-15deg) translateY(-2px);
 }
 
 @media (min-width: 480px) {
   .coming-soon-chip {
-    top: -8px;
-    right: -8px;
+    top: 4px;
+    right: 4px;
     padding: 4px 12px;
     font-size: 11px;
   }

@@ -1,55 +1,97 @@
-// Load reusable header and footer components
-async function loadComponents() {
-  try {
-    // Determine the correct path based on current page location
-    const currentPath = window.location.pathname;
-    const isRootPage = !currentPath.includes('/components/');
+const sharedHeader = `
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span>CalEye</span>
+    </a>
 
-    const headerPath = './components/header.html';
-    const footerPath = './components/footer.html';
+    <button class="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    // Load header
-    try {
-      const headerResponse = await fetch(headerPath);
-      if (headerResponse.ok) {
-        const headerHTML = await headerResponse.text();
-        const headerContainer = document.createElement('div');
-        headerContainer.innerHTML = headerHTML;
-        // Insert header at the beginning
-        document.body.insertBefore(headerContainer.firstElementChild, document.body.firstChild);
-        // Insert mobile menu before main
-        if (headerContainer.children.length > 0) {
-          const mainElement = document.querySelector('main');
-          if (mainElement) {
-            mainElement.parentNode.insertBefore(headerContainer.firstElementChild, mainElement);
-          }
-        }
-      }
-    } catch (headerError) {
-      console.log('Header loading skipped (may be expected in some environments)');
-    }
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+    </ul>
 
-    // Load footer
-    try {
-      const footerResponse = await fetch(footerPath);
-      if (footerResponse.ok) {
-        const footerHTML = await footerResponse.text();
-        document.body.insertAdjacentHTML('beforeend', footerHTML);
-      }
-    } catch (footerError) {
-      console.log('Footer loading failed:', footerError.message);
-    }
+    <div class="nav-cta">
+      <a href="#" class="btn btn--primary btn--small">Download Free</a>
+    </div>
+  </div>
+</nav>
 
-    // Re-initialize navbar functionality from main.js if it exists
-    if (window.toggleLinkFromNavMenu) {
-      // Re-attach event listeners if needed
-    }
-  } catch (error) {
-    console.log('Components loading error:', error.message);
-  }
+<div class="nav-menu">
+  <ul class="nav-menu-items">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="contact.html">Support</a></li>
+  </ul>
+</div>`;
+
+function getDownloadButtonsHTML(containerClass = "", showLabel = false, labelText = "&#10003; Available now") {
+  const normalizedClass = containerClass ? ` ${containerClass}` : "";
+
+  return `
+<div class="download-buttons${normalizedClass}">
+  <a href="#" class="store-btn store-btn--google" aria-label="Get it on Google Play">
+    <img src="./images/download-button/Store=Google Play, Type=Light, Language=English@2x.png" alt="Get it on Google Play">
+  </a>
+  <div class="store-btn-wrapper">
+    <a href="#" class="store-btn store-btn--apple" style="pointer-events: none; opacity: 0.55;" aria-label="Download on App Store (coming soon)">
+      <img src="./images/download-button/Store=App Store, Type=Light, Language=English@2x.png" alt="Download on App Store">
+    </a>
+    <div class="coming-soon-chip">Coming Soon</div>
+  </div>
+</div>
+${showLabel ? `<p class="cta-label">${labelText}</p>` : ""}`;
 }
 
-// Call when DOM is ready
+const sharedFooter = `
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <p class="footer-title">CalEye</p>
+        <p class="footer-tagline">AI-powered nutrition tracking for everyone</p>
+        <div data-download-buttons class="footer-downloads"></div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="features.html" class="footer-link">Features</a>
+        <a href="how-it-works.html" class="footer-link">How It Works</a>
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="terms.html" class="footer-link">Terms of Service</a>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 CalEye. All rights reserved.</p>
+  </div>
+</footer>`;
+
+function loadComponents() {
+  const headerPlaceholder = document.getElementById('header-placeholder');
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+
+  if (headerPlaceholder) {
+    headerPlaceholder.outerHTML = sharedHeader;
+  }
+
+  if (footerPlaceholder) {
+    footerPlaceholder.outerHTML = sharedFooter;
+  }
+
+  document.querySelectorAll("[data-download-buttons]").forEach((placeholder) => {
+    const classNames = placeholder.className ? placeholder.className.trim() : "";
+    const showLabel = placeholder.dataset.showLabel === "true";
+    const labelText = placeholder.dataset.label || "&#10003; Available now";
+    placeholder.outerHTML = getDownloadButtonsHTML(classNames, showLabel, labelText);
+  });
+}
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadComponents);
 } else {

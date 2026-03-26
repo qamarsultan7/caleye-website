@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -211,7 +211,7 @@
         }
 
         .faq-question::after {
-            content: '▼';
+            content: '\25BE';
             display: inline-block;
             margin-left: auto;
             transition: transform var(--transition-base);
@@ -236,40 +236,8 @@
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-inner">
-            <a href="index.html" class="logo">
-                <span>CalEye</span>
-            </a>
-
-            <button class="hamburger" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="how-it-works.html">How It Works</a></li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="#" class="btn btn--primary btn--small">Download Free</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="nav-menu">
-        <ul class="nav-menu-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="how-it-works.html">How It Works</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-    </div>
+    <!-- Shared Header -->
+    <div id="header-placeholder"></div>
 
     <main id="main">
         <!-- HERO -->
@@ -289,9 +257,9 @@
                     <div class="timeline-item fade-left">
                         <div class="timeline-item-number">1</div>
                         <div class="timeline-item-content">
-                            <div class="timeline-item-icon">📸</div>
+                            <div class="timeline-item-icon">&#128247;</div>
                             <h3>Open CalEye & Snap</h3>
-                            <p>Launch the app and point your camera at your meal. Take a photo from any angle—CalEye works with plated meals, take-out containers, home-cooked dishes, anything.</p>
+                            <p>Launch the app and point your camera at your meal. Take a photo from any angle&mdash;CalEye works with plated meals, take-out containers, home-cooked dishes, anything.</p>
                         </div>
                         <div class="timeline-item-image">
                             <img src="./images/how-it-works/step_1_snap.png" alt="Taking food photo" loading="lazy" width="600" height="300">
@@ -300,7 +268,7 @@
 
                     <div class="timeline-item fade-right">
                         <div class="timeline-item-content">
-                            <div class="timeline-item-icon">⚙️</div>
+                            <div class="timeline-item-icon">&#128247;</div>
                             <h3>AI Identifies Food</h3>
                             <p>Our advanced AI engine processes your photo in milliseconds. It identifies food items, estimates portions, and calculates nutrition instantly. No manual search needed.</p>
                         </div>
@@ -312,7 +280,7 @@
                     <div class="timeline-item fade-left">
                         <div class="timeline-item-number">3</div>
                         <div class="timeline-item-content">
-                            <div class="timeline-item-icon">📊</div>
+                            <div class="timeline-item-icon">&#128202;</div>
                             <h3>View Nutrition Breakdown</h3>
                             <p>Get instant access to calories, macros, micros, and more. See exactly what you're eating with a beautiful, easy-to-read display.</p>
                         </div>
@@ -323,7 +291,7 @@
 
                     <div class="timeline-item fade-right">
                         <div class="timeline-item-content">
-                            <div class="timeline-item-icon">✓</div>
+                            <div class="timeline-item-icon">&#10003;</div>
                             <h3>Confirm & Log</h3>
                             <p>Review the results. Edit portion sizes or food items if needed. One tap to log your meal to your daily diary.</p>
                         </div>
@@ -335,7 +303,7 @@
                     <div class="timeline-item fade-left">
                         <div class="timeline-item-number">5</div>
                         <div class="timeline-item-content">
-                            <div class="timeline-item-icon">📈</div>
+                            <div class="timeline-item-icon">&#128200;</div>
                             <h3>Track Your Progress</h3>
                             <p>Watch your daily totals update in real-time. Stay on track with your goals. Review your history and spot eating patterns.</p>
                         </div>
@@ -380,7 +348,7 @@
                     <details class="faq-item fade-up">
                         <summary class="faq-question">How does CalEye handle my privacy?</summary>
                         <div class="faq-answer">
-                            <p>Your food photos are never permanently stored on our servers. AI processing is ephemeral—the image is processed and then deleted. All data is encrypted in transit and at rest. You own your data and can export it anytime.</p>
+                            <p>Your food photos are never permanently stored on our servers. AI processing is ephemeral&mdash;the image is processed and then deleted. All data is encrypted in transit and at rest. You own your data and can export it anytime.</p>
                         </div>
                     </details>
 
@@ -408,38 +376,17 @@
                 <p class="fade-up" style="color: rgba(230, 247, 242, 0.9); margin-bottom: var(--space-xl);">
                     Start tracking your meals instantly with CalEye. Download free today.
                 </p>
-                <a href="#" class="store-btn store-btn--google fade-up">
-                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 3L3 15l12 12 12-12z" fill="currentColor"/>
-                    </svg>
-                    Get it on Google Play
-                </a>
+                <div class="fade-up" data-download-buttons></div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <p class="footer-title">CalEye</p>
-                    <p style="color: var(--text-on-dark);">AI-powered nutrition tracking for everyone</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html" class="footer-link">Home</a>
-                    <a href="features.html" class="footer-link">Features</a>
-                    <a href="how-it-works.html" class="footer-link">How It Works</a>
-                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
-                    <a href="contact.html" class="footer-link">Contact</a>
-                    <a href="terms.html" class="footer-link">Terms of Service</a>
-                </div>
-            </div>
-            <p class="footer-bottom">&copy; 2025 CalEye. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Shared Footer -->
+    <div id="footer-placeholder"></div>
 
+    <script src="./scripts/components.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/smoothscroll.js"></script>
 </body>
 </html>
+

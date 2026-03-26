@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -71,7 +71,7 @@
         }
 
         .legal-list li::before {
-            content: '✓';
+            content: '\2713';
             position: absolute;
             left: 0;
             color: var(--primary-500);
@@ -79,39 +79,8 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-inner">
-            <a href="index.html" class="logo">
-                <span>CalEye</span>
-            </a>
-
-            <button class="hamburger" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="how-it-works.html">How It Works</a></li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="#" class="btn btn--primary btn--small">Download Free</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="nav-menu">
-        <ul class="nav-menu-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="how-it-works.html">How It Works</a></li>
-            <li><a href="contact.html">Support</a></li>
-        </ul>
-    </div>
+    <!-- Shared Header -->
+    <div id="header-placeholder"></div>
 
     <section class="page-hero">
         <div class="container">
@@ -170,27 +139,11 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <p class="footer-title">CalEye</p>
-                    <p style="color: var(--text-on-dark);">AI-powered nutrition tracking for everyone</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html" class="footer-link">Home</a>
-                    <a href="features.html" class="footer-link">Features</a>
-                    <a href="how-it-works.html" class="footer-link">How It Works</a>
-                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
-                    <a href="contact.html" class="footer-link">Contact</a>
-                    <a href="terms.html" class="footer-link">Terms of Service</a>
-                </div>
-            </div>
-            <p class="footer-bottom">&copy; 2025 CalEye. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Shared Footer -->
+    <div id="footer-placeholder"></div>
+    <script src="./scripts/components.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/smoothscroll.js"></script>
 </body>
 </html>
+

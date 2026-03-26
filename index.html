@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CalEye - AI-powered food calorie tracking. Just snap a photo and track your nutrition instantly.">
+    <meta name="description"
+        content="CalEye - AI-powered food calorie tracking. Just snap a photo and track your nutrition instantly.">
     <meta name="keywords" content="calorie tracking, food recognition, AI nutrition, food scanner">
     <meta name="theme-color" content="#0FA58B">
 
@@ -12,7 +14,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..150,100..700;1,9..150,100..700&family=Fraunces:opsz,wght@9..144,400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..150,100..700;1,9..150,100..700&family=Fraunces:opsz,wght@9..144,400..900&display=swap"
+        rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/main.css">
@@ -40,6 +44,7 @@
                 padding: var(--space-2xl) 0;
             }
         }
+
         .features-section {
             background: var(--bg);
         }
@@ -158,13 +163,13 @@
             }
         }
 
-        .hero-cta > div {
+        .hero-cta>div {
             flex: 1;
             min-width: 160px;
         }
 
         @media (min-width: 480px) {
-            .hero-cta > div {
+            .hero-cta>div {
                 flex: initial;
             }
         }
@@ -622,42 +627,11 @@
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-inner">
-            <a href="index.html" class="logo">
-                <span>CalEye</span>
-            </a>
-
-            <button class="hamburger" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="how-it-works.html">How It Works</a></li>
-            </ul>
-
-            <div class="nav-cta">
-                <a href="#" class="btn btn--primary btn--small">Download Free</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="nav-menu">
-        <ul class="nav-menu-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="how-it-works.html">How It Works</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-    </div>
+    <!-- Shared Header -->
+    <div id="header-placeholder"></div>
 
     <main id="main">
         <!-- HERO SECTION -->
@@ -669,29 +643,12 @@
                             Snap a photo. <span class="highlight">Know every calorie.</span>
                         </h1>
                         <p class="hero-subtitle">
-                            CalEye uses AI to instantly identify your food and log nutrition — no manual entry, no guesswork.
+                            CalEye uses AI to instantly identify your food and log nutrition &mdash; no manual entry, no
+                            guesswork.
                         </p>
 
                         <div class="hero-cta">
-                            <div>
-                                <a href="#" class="store-btn store-btn--google">
-                                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 3L3 15l12 12 12-12z" fill="currentColor"/>
-                                    </svg>
-                                    Get it on Google Play
-                                </a>
-                                <p class="cta-label">✓ Available now</p>
-                            </div>
-                            <div class="store-btn-wrapper">
-                                <button class="store-btn store-btn--apple" disabled aria-label="Download on App Store (coming soon)">
-                                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 25c-2.2 0-4-1.8-4-4V9c0-2.2 1.8-4 4-4h14c2.2 0 4 1.8 4 4v12c0 2.2-1.8 4-4 4H8z" fill="currentColor" opacity="0.8"/>
-                                        <path d="M15 5c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z" fill="white"/>
-                                    </svg>
-                                    Download on App Store
-                                </button>
-                                <div class="coming-soon-chip">Coming Soon</div>
-                                <div class="tooltip">iOS version launching soon!</div>
+                            <div data-download-buttons data-show-label="false" data-label="&#10003; Available now">
                             </div>
                         </div>
                     </div>
@@ -699,10 +656,11 @@
                     <div class="phone-mockup-wrapper fade-right">
                         <div class="phone-mockup">
                             <div class="phone-screen">
-                                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80" alt="Salad bowl - food tracking example" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80"
+                                    alt="Salad bowl - food tracking example" loading="lazy">
                             </div>
                             <div class="phone-floating-card">
-                                <span class="icon">✓</span>
+                                <span class="icon">&#10003;</span>
                                 2,847 calories tracked today
                             </div>
                         </div>
@@ -715,14 +673,18 @@
         <section class="social-proof">
             <div class="marquee">
                 <div class="marquee-content-inner">
-                    <div class="proof-item">⭐⭐⭐⭐⭐ <strong>Loved by 10,000+ users</strong></div>
-                    <div class="proof-item">🤖 <strong>AI-powered</strong></div>
-                    <div class="proof-item">🔒 <strong>Privacy-first</strong></div>
-                    <div class="proof-item">⚡ <strong>Free to start</strong></div>
-                    <div class="proof-item">⭐⭐⭐⭐⭐ <strong>Loved by 10,000+ users</strong></div>
-                    <div class="proof-item">🤖 <strong>AI-powered</strong></div>
-                    <div class="proof-item">🔒 <strong>Privacy-first</strong></div>
-                    <div class="proof-item">⚡ <strong>Free to start</strong></div>
+                    <div class="proof-item">
+                        <span style="color: gold;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <strong>Loved by 10,000+ users</strong>
+                    </div>
+                    <div class="proof-item">&#129302; <strong>AI-powered</strong></div>
+                    <div class="proof-item">&#128274; <strong>Privacy-first</strong></div>
+                    <div class="proof-item">&#10003; <strong>Free to start</strong></div>
+                    <div class="proof-item">&#9733;&#9733;&#9733;&#9733;&#9733; <strong>Loved by 10,000+ users</strong>
+                    </div>
+                    <div class="proof-item">&#129302; <strong>AI-powered</strong></div>
+                    <div class="proof-item">&#128274; <strong>Privacy-first</strong></div>
+                    <div class="proof-item">&#10003; <strong>Free to start</strong></div>
                 </div>
             </div>
         </section>
@@ -737,37 +699,41 @@
 
                 <div class="features-grid">
                     <div class="card stagger-item fade-up">
-                        <div class="card-icon">📸</div>
+                        <div class="card-icon">&#128247;</div>
                         <h3>Instant AI Recognition</h3>
-                        <p>Point your camera at any meal. CalEye identifies ingredients and calculates macros in under 2 seconds.</p>
+                        <p>Point your camera at any meal. CalEye identifies ingredients and calculates macros in under 2
+                            seconds.</p>
                     </div>
 
                     <div class="card stagger-item fade-up">
-                        <div class="card-icon orange">📊</div>
+                        <div class="card-icon orange">&#128202;</div>
                         <h3>Detailed Nutrition Breakdown</h3>
-                        <p>Calories, protein, carbs, fats, fiber — all logged automatically. Visual charts make tracking effortless.</p>
+                        <p>Calories, protein, carbs, fats, fiber &mdash; all logged automatically. Visual charts make
+                            tracking effortless.</p>
                     </div>
 
                     <div class="card stagger-item fade-up">
-                        <div class="card-icon blue">🎯</div>
+                        <div class="card-icon blue">&#127919;</div>
                         <h3>Smart Daily Goals</h3>
-                        <p>Set personalized calorie and macro targets. CalEye tracks your progress and nudges you toward your goals.</p>
+                        <p>Set personalized calorie and macro targets. CalEye tracks your progress and nudges you toward
+                            your goals.</p>
                     </div>
 
                     <div class="card stagger-item fade-up">
-                        <div class="card-icon success">🕐</div>
+                        <div class="card-icon success">&#128337;</div>
                         <h3>Meal History Timeline</h3>
                         <p>Every meal logged with timestamp and photo. Review your eating habits at a glance.</p>
                     </div>
 
                     <div class="card stagger-item fade-up">
-                        <div class="card-icon">🔒</div>
+                        <div class="card-icon">&#128274;</div>
                         <h3>Privacy First</h3>
-                        <p>Your food photos never leave your device for storage. AI processing is ephemeral and secure.</p>
+                        <p>Your food photos never leave your device for storage. AI processing is ephemeral and secure.
+                        </p>
                     </div>
 
                     <div class="card stagger-item fade-up">
-                        <div class="card-icon blue">⚡</div>
+                        <div class="card-icon blue">&#10003;</div>
                         <h3>Works Offline</h3>
                         <p>Core features work without internet. Sync all your data when connected.</p>
                     </div>
@@ -786,21 +752,21 @@
                 <div class="steps-container">
                     <div class="step fade-left" style="animation-delay: 0ms;">
                         <div class="step-number">1</div>
-                        <div class="step-icon">📸</div>
+                        <div class="step-icon">&#128247;</div>
                         <h3>Snap</h3>
                         <p>Take a photo of your meal using CalEye. Works with any food, any plate.</p>
                     </div>
 
                     <div class="step fade-up" style="animation-delay: 100ms;">
                         <div class="step-number">2</div>
-                        <div class="step-icon">⚙️</div>
+                        <div class="step-icon">&#128247;</div>
                         <h3>Analyze</h3>
                         <p>AI identifies food and nutrition instantly. Results in under 2 seconds.</p>
                     </div>
 
                     <div class="step fade-right" style="animation-delay: 200ms;">
                         <div class="step-number">3</div>
-                        <div class="step-icon">✓</div>
+                        <div class="step-icon">&#10003;</div>
                         <h3>Track</h3>
                         <p>Log it automatically and monitor your daily progress toward your goals.</p>
                     </div>
@@ -819,33 +785,36 @@
                 <div class="testimonials-grid">
                     <div class="testimonial-card stagger-item fade-up">
                         <div class="quote-mark">"</div>
-                        <p class="testimonial-text">I lost 8kg in 3 months just by being aware of what I eat. CalEye made it effortless.</p>
+                        <p class="testimonial-text">I lost 8kg in 3 months just by being aware of what I eat. CalEye
+                            made it effortless.</p>
                         <div class="testimonial-author">
                             <div class="testimonial-author-info">
                                 <span class="testimonial-author-name">Sarah K.</span>
-                                <span class="testimonial-rating">⭐⭐⭐⭐⭐</span>
+                                <span class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="testimonial-card stagger-item fade-up">
                         <div class="quote-mark">"</div>
-                        <p class="testimonial-text">Finally an app that doesn't make me manually search for every ingredient. The AI is scary accurate.</p>
+                        <p class="testimonial-text">Finally an app that doesn't make me manually search for every
+                            ingredient. The AI is scary accurate.</p>
                         <div class="testimonial-author">
                             <div class="testimonial-author-info">
                                 <span class="testimonial-author-name">Ahmed R.</span>
-                                <span class="testimonial-rating">⭐⭐⭐⭐⭐</span>
+                                <span class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="testimonial-card stagger-item fade-up">
                         <div class="quote-mark">"</div>
-                        <p class="testimonial-text">The photo recognition even got my mom's home-cooked biryani right. I was shocked.</p>
+                        <p class="testimonial-text">The photo recognition even got my mom's home-cooked biryani right. I
+                            was shocked.</p>
                         <div class="testimonial-author">
                             <div class="testimonial-author-info">
                                 <span class="testimonial-author-name">Priya M.</span>
-                                <span class="testimonial-rating">⭐⭐⭐⭐⭐</span>
+                                <span class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                             </div>
                         </div>
                     </div>
@@ -860,54 +829,22 @@
                     <h2>Start tracking in 30 seconds</h2>
                     <p>Free to download. No account required to start. Just open and snap.</p>
 
-                    <div class="cta-buttons">
-                        <a href="#" class="store-btn store-btn--google">
-                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 3L3 15l12 12 12-12z" fill="currentColor"/>
-                            </svg>
-                            Get it on Google Play
-                        </a>
-                        <div class="store-btn-wrapper">
-                            <button class="store-btn store-btn--apple" disabled>
-                                <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 25c-2.2 0-4-1.8-4-4V9c0-2.2 1.8-4 4-4h14c2.2 0 4 1.8 4 4v12c0 2.2-1.8 4-4 4H8z" fill="currentColor" opacity="0.8"/>
-                                    <path d="M15 5c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z" fill="white"/>
-                                </svg>
-                                Download on App Store
-                            </button>
-                            <div class="coming-soon-chip">Coming Soon</div>
-                        </div>
-                    </div>
+                    <div class="cta-buttons" data-download-buttons></div>
 
-                    <p class="text-muted" style="margin-top: var(--space-lg); font-size: 13px;">iOS App Store launch coming soon.</p>
+                    <p class="text-muted" style="margin-top: var(--space-lg); font-size: 13px;">iOS App Store launch
+                        coming soon.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <p class="footer-title">CalEye</p>
-                    <p style="color: var(--text-on-dark);">AI-powered nutrition tracking for everyone</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html" class="footer-link">Home</a>
-                    <a href="features.html" class="footer-link">Features</a>
-                    <a href="how-it-works.html" class="footer-link">How It Works</a>
-                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
-                    <a href="contact.html" class="footer-link">Contact</a>
-                    <a href="terms.html" class="footer-link">Terms of Service</a>
-                </div>
-            </div>
-            <p class="footer-bottom">&copy; 2025 CalEye. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Shared Footer -->
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
+    <script src="./scripts/components.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/smoothscroll.js"></script>
 </body>
+
 </html>
