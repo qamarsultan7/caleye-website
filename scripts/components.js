@@ -18,7 +18,7 @@ const sharedHeader = `
     </ul>
 
     <div class="nav-cta">
-      <a href="#" class="btn btn--primary btn--small">Download Free</a>
+      <a href="index.html" class="btn btn--primary btn--small">Download Free</a>
     </div>
   </div>
 </nav>

@@ -183,13 +183,14 @@
             font-weight: 600;
         }
 
-        /* Phone Mockup */
+        /* Hero App Screens */
         .phone-mockup-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             margin-top: var(--space-lg);
+            perspective: 1200px;
         }
 
         @media (min-width: 1024px) {
@@ -198,124 +199,144 @@
             }
         }
 
-        .phone-mockup {
+        .phone-showcase {
             position: relative;
-            width: 220px;
+            width: min(100%, 340px);
             height: 440px;
-            background: #000;
-            border-radius: 36px;
-            padding: 10px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            overflow: hidden;
-            animation: float 3s ease-in-out infinite;
-            border: 6px solid #1a1a1a;
+            animation: float 5s ease-in-out infinite;
         }
 
         @media (min-width: 480px) {
-            .phone-mockup {
-                width: 260px;
-                height: 520px;
-                border-radius: 40px;
-                padding: 12px;
-                border: 8px solid #1a1a1a;
+            .phone-showcase {
+                width: min(100%, 390px);
+                height: 510px;
             }
         }
 
         @media (min-width: 1024px) {
-            .phone-mockup {
-                width: 280px;
+            .phone-showcase {
+                width: min(100%, 430px);
                 height: 560px;
-                border-radius: 40px;
-                padding: 12px;
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
             }
         }
 
-        .phone-mockup::before {
-            content: '';
+        .phone-showcase-title {
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 120px;
-            height: 20px;
-            background: #000;
-            border-radius: 0 0 16px 16px;
-            z-index: 10;
+            z-index: 12;
+            font-size: 10px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-on-dark);
+            background: rgba(10, 41, 37, 0.7);
+            border: 1px solid rgba(51, 221, 176, 0.3);
+            border-radius: 999px;
+            padding: 6px 12px;
+            white-space: nowrap;
+            backdrop-filter: blur(8px);
         }
 
         @media (min-width: 480px) {
-            .phone-mockup::before {
-                width: 140px;
-                height: 24px;
-                border-radius: 0 0 18px 18px;
+            .phone-showcase-title {
+                font-size: 11px;
+                letter-spacing: 1px;
+                padding: 7px 14px;
             }
         }
 
-        @media (min-width: 1024px) {
-            .phone-mockup::before {
-                width: 150px;
-                height: 25px;
-                border-radius: 0 0 20px 20px;
-            }
-        }
-
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            border-radius: 32px;
+        .app-screen-card {
+            position: absolute;
+            margin: 0;
+            width: 132px;
+            aspect-ratio: 1320 / 2868;
+            border-radius: 22px;
             overflow: hidden;
-            position: relative;
+            border: 4px solid rgba(230, 247, 242, 0.14);
+            background: #0a2925;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
         }
 
         @media (min-width: 480px) {
-            .phone-screen {
-                border-radius: 34px;
+            .app-screen-card {
+                width: 154px;
+                border-radius: 24px;
+                border-width: 5px;
+                box-shadow: 0 18px 44px rgba(0, 0, 0, 0.38);
             }
         }
 
         @media (min-width: 1024px) {
-            .phone-screen {
-                border-radius: 36px;
+            .app-screen-card {
+                width: 174px;
+                border-radius: 26px;
             }
         }
 
-        .phone-screen img {
+        .app-screen-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
-        .phone-floating-card {
+        .app-screen-card figcaption {
             position: absolute;
-            bottom: 16px;
+            bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--surface);
-            border-radius: 10px;
-            padding: 10px 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--text);
-            z-index: 20;
-            animation: float 4s ease-in-out infinite;
-            animation-delay: 0.5s;
+            background: rgba(8, 28, 24, 0.88);
+            color: #e6f7f2;
+            border: 1px solid rgba(51, 221, 176, 0.32);
+            border-radius: 999px;
+            padding: 5px 10px;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.55px;
+            text-transform: uppercase;
             white-space: nowrap;
         }
 
         @media (min-width: 480px) {
-            .phone-floating-card {
-                bottom: 20px;
-                border-radius: 12px;
-                padding: 12px 20px;
-                font-size: 12px;
+            .app-screen-card figcaption {
+                bottom: 12px;
+                font-size: 10px;
+                padding: 6px 11px;
             }
         }
 
-        .phone-floating-card .icon {
-            display: inline-block;
-            margin-right: 6px;
+        .app-screen-card.card-main {
+            top: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .app-screen-card.card-left {
+            top: 150px;
+            left: 4px;
+            transform: rotate(-9deg);
+            z-index: 6;
+        }
+
+        .app-screen-card.card-right {
+            top: 150px;
+            right: 4px;
+            transform: rotate(9deg);
+            z-index: 6;
+        }
+
+        @media (min-width: 1024px) {
+            .app-screen-card.card-main {
+                top: 54px;
+            }
+
+            .app-screen-card.card-left,
+            .app-screen-card.card-right {
+                top: 168px;
+            }
         }
 
         /* Social Proof Bar */
@@ -654,15 +675,26 @@
                     </div>
 
                     <div class="phone-mockup-wrapper fade-right">
-                        <div class="phone-mockup">
-                            <div class="phone-screen">
-                                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80"
-                                    alt="Salad bowl - food tracking example" loading="lazy">
-                            </div>
-                            <div class="phone-floating-card">
-                                <span class="icon">&#10003;</span>
-                                2,847 calories tracked today
-                            </div>
+                        <div class="phone-showcase" aria-label="CalEye app screens preview">
+                            <p class="phone-showcase-title">See CalEye in action</p>
+
+                            <figure class="app-screen-card card-main">
+                                <img src="./images/03-dashboard-light-1320x2868.png" alt="CalEye dashboard screen"
+                                    loading="lazy">
+                                <figcaption>Dashboard</figcaption>
+                            </figure>
+
+                            <figure class="app-screen-card card-left">
+                                <img src="./images/01-meal-sections-light-1320x2868.png"
+                                    alt="CalEye meal sections screen" loading="lazy">
+                                <figcaption>Meal Sections</figcaption>
+                            </figure>
+
+                            <figure class="app-screen-card card-right">
+                                <img src="./images/02-nutrition-plan-light-1320x2868.png"
+                                    alt="CalEye nutrition plan screen" loading="lazy">
+                                <figcaption>Nutrition Plan</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
