@@ -1,0 +1,17 @@
+# Caleye
+> Official public website pages for product information and policies.
+
+## Canonical
+- https://caleye.co/
+
+## Pages
+- [Home](https://caleye.co/): Product overview.
+- [Features](https://caleye.co/features.html): Full feature list.
+- [How It Works](https://caleye.co/how-it-works.html): Workflow and usage details.
+- [Contact](https://caleye.co/contact.html): Contact information.
+- [Privacy Policy](https://caleye.co/privacy.html): Privacy and data policy.
+- [Terms](https://caleye.co/terms.html): Terms and conditions.
+
+## Crawling
+- Public content may be indexed.
+- Sitemap: https://caleye.co/sitemap.xml

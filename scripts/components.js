@@ -37,7 +37,7 @@ function getDownloadButtonsHTML(containerClass = "", showLabel = false, labelTex
 
   return `
 <div class="download-buttons${normalizedClass}">
-  <a href="#" class="store-btn store-btn--google" aria-label="Get it on Google Play">
+  <a href="https://play.google.com/store/apps/details?id=com.caleye.caloriescounter" class="store-btn store-btn--google" aria-label="Get it on Google Play">
     <img src="./images/download-button/Store=Google Play, Type=Light, Language=English@2x.png" alt="Get it on Google Play">
   </a>
   <div class="store-btn-wrapper">
