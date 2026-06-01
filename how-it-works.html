@@ -4,10 +4,18 @@
     <script src="/scripts/redirect.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn how CalEye works to track food and nutrition instantly. Step-by-step explainer.">
-    <meta name="title" content="How It Works - CalEye">
+    <meta name="description" content="Learn how CalEye works as a Calorie Counter app, AI calorie tracker, and Nutrition tracker: snap a food photo, estimate calories and macros, and log meals.">
+    <meta name="title" content="How the CalEye Calorie Counter App and AI Calorie Tracker Works">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CalEye">
+    <meta property="og:title" content="How the CalEye Calorie Counter App and AI Calorie Tracker Works">
+    <meta property="og:description" content="See how CalEye turns a food photo into calorie, macro, and nutrition tracking in seconds.">
+    <meta property="og:url" content="https://caleye.co/how-it-works">
+    <meta property="og:image" content="https://caleye.co/images/how-it-works/step_3_nutrition_view.png">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <title>How It Works - CalEye</title>
+    <title>How the CalEye Calorie Counter App and AI Calorie Tracker Works</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
@@ -22,6 +30,49 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/components.css">
     <link rel="stylesheet" href="./styles/animations.css">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "name": "CalEye Calorie Counter App and AI Calorie Tracker FAQ",
+            "keywords": "Calorie Counter app, AI calorie tracker, Nutrition tracker, food calorie scanner",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How accurate is the AI food recognition?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "CalEye's AI has been trained on over 50,000 food photos and achieves 99.2% accuracy on common foods. You can manually adjust portions and ingredients for edge cases."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does CalEye work with all types of food?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "CalEye recognizes 5000+ food types globally, including home-cooked meals, restaurant dishes, packaged foods, mixed dishes, and cuisines from around the world."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I use CalEye without an internet connection?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. CalEye's core features work offline so you can scan meals, view history, and track progress. Your data syncs when you reconnect."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is there a free version or do I need to pay?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "CalEye is free to download and use, with 10 AI scans per day on the free tier plus meal history, goal tracking, and offline features."
+                    }
+                }
+            ]
+        }
+    </script>
 
     <style>
         .hero {
@@ -251,8 +302,9 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content fade-up">
-                    <h1>Step-by-step to smarter eating</h1>
-                    <p>CalEye makes nutrition tracking as simple as 1-2-3. No complexity. No friction.</p>
+                    <h1>How the CalEye Calorie Counter app and AI calorie tracker works</h1>
+                    <p>Snap a meal photo, get calorie and macro estimates, confirm the result, and use CalEye as your
+                        Nutrition tracker without manual searching.</p>
                 </div>
             </div>
         </section>
@@ -266,21 +318,22 @@
                         <div class="timeline-item-content">
                             <div class="timeline-item-icon">&#128247;</div>
                             <h3>Open CalEye & Snap</h3>
-                            <p>Launch the app and point your camera at your meal. Take a photo from any angle&mdash;CalEye works with plated meals, take-out containers, home-cooked dishes, anything.</p>
+                            <p>Launch the Calorie Counter app and point your camera at your meal. Take a photo from any angle&mdash;CalEye works with plated meals, take-out containers, and home-cooked dishes.</p>
                         </div>
                         <div class="timeline-item-image">
-                            <img src="./images/how-it-works/step_1_snap.png" alt="Taking food photo" loading="lazy" width="600" height="300">
+                            <img src="./images/how-it-works/step_1_snap.png" alt="Taking a food photo in the CalEye Calorie Counter app" loading="lazy" width="600" height="300">
                         </div>
                     </div>
 
                     <div class="timeline-item fade-right">
+                        <div class="timeline-item-number">2</div>
                         <div class="timeline-item-content">
                             <div class="timeline-item-icon">&#128247;</div>
-                            <h3>AI Identifies Food</h3>
-                            <p>Our advanced AI engine processes your photo in milliseconds. It identifies food items, estimates portions, and calculates nutrition instantly. No manual search needed.</p>
+                            <h3>AI Calorie Tracker Identifies Food</h3>
+                            <p>Our AI engine processes your photo in milliseconds. It identifies food items, estimates portions, and calculates calories and nutrition instantly. No manual search needed.</p>
                         </div>
                         <div class="timeline-item-image">
-                            <img src="./images/how-it-works/step_2_analyze.png" alt="AI processing" loading="lazy" width="600" height="300">
+                            <img src="./images/how-it-works/step_2_analyze.png" alt="AI calorie tracker analyzing a meal photo" loading="lazy" width="600" height="300">
                         </div>
                     </div>
 
@@ -288,22 +341,23 @@
                         <div class="timeline-item-number">3</div>
                         <div class="timeline-item-content">
                             <div class="timeline-item-icon">&#128202;</div>
-                            <h3>View Nutrition Breakdown</h3>
+                            <h3>View Nutrition Tracker Breakdown</h3>
                             <p>Get instant access to calories, macros, micros, and more. See exactly what you're eating with a beautiful, easy-to-read display.</p>
                         </div>
                         <div class="timeline-item-image">
-                            <img src="./images/how-it-works/step_3_nutrition_view.png" alt="Nutrition results" loading="lazy" width="600" height="300">
+                            <img src="./images/how-it-works/step_3_nutrition_view.png" alt="Nutrition tracker results with calories and macros" loading="lazy" width="600" height="300">
                         </div>
                     </div>
 
                     <div class="timeline-item fade-right">
+                        <div class="timeline-item-number">4</div>
                         <div class="timeline-item-content">
                             <div class="timeline-item-icon">&#10003;</div>
                             <h3>Confirm & Log</h3>
                             <p>Review the results. Edit portion sizes or food items if needed. One tap to log your meal to your daily diary.</p>
                         </div>
                         <div class="timeline-item-image">
-                            <img src="./images/how-it-works/step_4_confirm.png" alt="Logging meal" loading="lazy" width="600" height="300">
+                            <img src="./images/how-it-works/step_4_confirm.png" alt="Logging a meal in the CalEye Calorie Counter app" loading="lazy" width="600" height="300">
                         </div>
                     </div>
 
@@ -315,7 +369,7 @@
                             <p>Watch your daily totals update in real-time. Stay on track with your goals. Review your history and spot eating patterns.</p>
                         </div>
                         <div class="timeline-item-image">
-                            <img src="./images/how-it-works/step_5_progress.JPG" alt="Progress tracking" loading="lazy" width="600" height="300">
+                            <img src="./images/how-it-works/step_5_progress.JPG" alt="Nutrition tracker progress for daily calorie goals" loading="lazy" width="600" height="300">
                         </div>
                     </div>
                 </div>
@@ -327,7 +381,8 @@
             <div class="container">
                 <div class="section-title fade-up">
                     <h2>Frequently Asked Questions</h2>
-                    <p>Everything you need to know about CalEye</p>
+                    <p>Everything you need to know about using CalEye as your Calorie Counter app, AI calorie tracker,
+                        and Nutrition tracker.</p>
                 </div>
 
                 <div class="faq-container">
@@ -381,7 +436,7 @@
             <div class="container text-center">
                 <h2 class="fade-up" style="color: var(--text-on-dark);">Ready to get started?</h2>
                 <p class="fade-up" style="color: rgba(230, 247, 242, 0.9); margin-bottom: var(--space-xl);">
-                    Start tracking your meals instantly with CalEye. Download free today.
+                    Start counting calories from food photos with CalEye. Download free today.
                 </p>
                 <div class="fade-up" data-download-buttons></div>
             </div>

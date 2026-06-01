@@ -1,6 +1,8 @@
 # Allow search engines and AI crawlers to access all public pages.
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Explicitly allow common search and AI crawler user agents.
 User-agent: Googlebot
@@ -31,3 +33,5 @@ User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://caleye.co/sitemap.xml
+LLMs: https://caleye.co/llms.txt
+LLMs-Full: https://caleye.co/llms-full.txt

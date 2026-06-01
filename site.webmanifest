@@ -1,6 +1,7 @@
 {
-  "name": "CalEye",
+  "name": "CalEye - Calorie Counter App, AI Calorie Tracker",
   "short_name": "CalEye",
+  "description": "Calorie Counter app, AI calorie tracker, and Nutrition tracker for scanning food photos, estimating calories and macros, and tracking daily nutrition goals.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",

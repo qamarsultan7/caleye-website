@@ -6,17 +6,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="CalEye - AI-powered food calorie tracking. Just snap a photo and track your nutrition instantly.">
-    <meta name="keywords" content="calorie tracking, food recognition, AI nutrition, food scanner">
+        content="CalEye is a free Calorie Counter app, AI calorie tracker, and nutrition tracker that scans food photos, estimates calories and macros, and logs meals fast.">
+    <meta name="keywords" content="Calorie Counter app, AI calorie tracker, Nutrition tracker, AI calorie counter, food calorie scanner, calorie tracking app, macro tracker">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="CalEye">
     <meta name="theme-color" content="#0FA58B">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CalEye">
+    <meta property="og:title" content="CalEye - Calorie Counter App, AI Calorie Tracker">
+    <meta property="og:description"
+        content="Use CalEye as a Calorie Counter app, AI calorie tracker, and nutrition tracker for food photo scanning and faster meal logging.">
+    <meta property="og:url" content="https://caleye.co/">
+    <meta property="og:image" content="https://caleye.co/images/03-dashboard-light-1320x2868.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CalEye - Calorie Counter App, AI Calorie Tracker">
+    <meta name="twitter:description"
+        content="A free nutrition tracker that scans food photos and tracks calories, macros, and daily goals.">
+    <meta name="twitter:image" content="https://caleye.co/images/03-dashboard-light-1320x2868.png">
 
-    <title>CalEye - AI-Powered Calorie Tracking</title>
+    <title>CalEye - Calorie Counter App, AI Calorie Tracker</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="canonical" href="https://caleye.co/">
+    <link rel="alternate" type="text/plain" href="https://caleye.co/llms.txt" title="CalEye LLM summary">
+    <link rel="alternate" type="text/plain" href="https://caleye.co/llms-full.txt" title="CalEye full LLM context">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +45,93 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/components.css">
     <link rel="stylesheet" href="./styles/animations.css">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://caleye.co/#organization",
+                    "name": "CalEye",
+                    "url": "https://caleye.co/",
+                    "logo": "https://caleye.co/apple-touch-icon.png",
+                    "sameAs": [
+                        "https://play.google.com/store/apps/details?id=com.caleye.caloriescounter"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://caleye.co/#website",
+                    "url": "https://caleye.co/",
+                    "name": "CalEye",
+                    "description": "Calorie Counter app, AI calorie tracker, and nutrition tracker for food photo scanning, macro tracking, and daily calorie goals.",
+                    "keywords": "Calorie Counter app, AI calorie tracker, Nutrition tracker, AI calorie counter, food calorie scanner, macro tracker",
+                    "publisher": {
+                        "@id": "https://caleye.co/#organization"
+                    }
+                },
+                {
+                    "@type": "MobileApplication",
+                    "@id": "https://caleye.co/#app",
+                    "name": "CalEye",
+                    "alternateName": [
+                        "CalEye Calorie Counter App",
+                        "CalEye AI Calorie Tracker",
+                        "CalEye Nutrition Tracker"
+                    ],
+                    "operatingSystem": "Android",
+                    "applicationCategory": "HealthApplication",
+                    "downloadUrl": "https://play.google.com/store/apps/details?id=com.caleye.caloriescounter",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "description": "CalEye is a Calorie Counter app, AI calorie tracker, and nutrition tracker that scans food photos, estimates calories and macros, and tracks daily nutrition goals.",
+                    "keywords": "Calorie Counter app, AI calorie tracker, Nutrition tracker, food calorie scanner, calorie tracking app, macro tracker",
+                    "screenshot": [
+                        "https://caleye.co/images/03-dashboard-light-1320x2868.png",
+                        "https://caleye.co/images/01-meal-sections-light-1320x2868.png",
+                        "https://caleye.co/images/02-nutrition-plan-light-1320x2868.png"
+                    ],
+                    "publisher": {
+                        "@id": "https://caleye.co/#organization"
+                    }
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://caleye.co/#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Is CalEye a Calorie Counter app?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. CalEye is a Calorie Counter app that helps users log meals, estimate calories, and track daily calorie goals from food photos."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Is CalEye an AI calorie tracker?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. CalEye uses AI food recognition to identify meals, estimate portions, calculate calories and macros, and reduce manual food diary entry."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Is CalEye a Nutrition tracker?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. CalEye tracks calories, protein, carbohydrates, fat, fiber, meal history, daily goals, and nutrition progress."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
 
     <style>
         /* Section padding utilities for responsive design */
@@ -54,6 +157,18 @@
 
         .features-section {
             background: var(--bg);
+        }
+
+        .seo-answer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+
+        @media (min-width: 768px) {
+            .seo-answer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         /* Responsive Text */
@@ -668,11 +783,11 @@
                 <div class="hero-content">
                     <div class="hero-text fade-left">
                         <h1 class="hero-title">
-                            Snap a photo. <span class="highlight">Know every calorie.</span>
+                            Calorie Counter app and <span class="highlight">AI calorie tracker.</span>
                         </h1>
                         <p class="hero-subtitle">
-                            CalEye uses AI to instantly identify your food and log nutrition &mdash; no manual entry, no
-                            guesswork.
+                            CalEye is a nutrition tracker that scans your meal photo, estimates calories and macros, and
+                            logs nutrition in seconds &mdash; no manual search, no guesswork.
                         </p>
 
                         <div class="hero-cta">
@@ -686,20 +801,21 @@
                             <p class="phone-showcase-title">See CalEye in action</p>
 
                             <figure class="app-screen-card card-main">
-                                <img src="./images/03-dashboard-light-1320x2868.png" alt="CalEye dashboard screen"
+                                <img src="./images/03-dashboard-light-1320x2868.png"
+                                    alt="CalEye nutrition tracker dashboard with daily calories and macros"
                                     loading="lazy">
                                 <figcaption>Dashboard</figcaption>
                             </figure>
 
                             <figure class="app-screen-card card-left">
                                 <img src="./images/01-meal-sections-light-1320x2868.png"
-                                    alt="CalEye meal sections screen" loading="lazy">
+                                    alt="CalEye Calorie Counter app meal sections screen" loading="lazy">
                                 <figcaption>Meal Sections</figcaption>
                             </figure>
 
                             <figure class="app-screen-card card-right">
                                 <img src="./images/02-nutrition-plan-light-1320x2868.png"
-                                    alt="CalEye nutrition plan screen" loading="lazy">
+                                    alt="CalEye AI calorie tracker nutrition plan screen" loading="lazy">
                                 <figcaption>Nutrition Plan</figcaption>
                             </figure>
                         </div>
@@ -714,14 +830,14 @@
                 <div class="marquee-content-inner">
                     <div class="proof-item">
                         <span style="color: gold;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <strong>Loved by 10,000+ users</strong>
+                        <strong>Calorie counter app loved by 10,000+ users</strong>
                     </div>
-                    <div class="proof-item">&#129302; <strong>AI-powered</strong></div>
+                    <div class="proof-item">&#129302; <strong>AI calorie tracker</strong></div>
                     <div class="proof-item">&#128274; <strong>Privacy-first</strong></div>
                     <div class="proof-item">&#10003; <strong>Free to start</strong></div>
-                    <div class="proof-item">&#9733;&#9733;&#9733;&#9733;&#9733; <strong>Loved by 10,000+ users</strong>
+                    <div class="proof-item">&#9733;&#9733;&#9733;&#9733;&#9733; <strong>Calorie counter app loved by 10,000+ users</strong>
                     </div>
-                    <div class="proof-item">&#129302; <strong>AI-powered</strong></div>
+                    <div class="proof-item">&#129302; <strong>AI calorie tracker</strong></div>
                     <div class="proof-item">&#128274; <strong>Privacy-first</strong></div>
                     <div class="proof-item">&#10003; <strong>Free to start</strong></div>
                 </div>
@@ -732,28 +848,29 @@
         <section class="features-section section-padded">
             <div class="container">
                 <div class="section-title fade-up">
-                    <h2>Everything you need to eat smarter</h2>
-                    <p>Powerful features designed to make nutrition tracking effortless and accurate.</p>
+                    <h2>Everything a Calorie Counter app should make easy</h2>
+                    <p>Scan meals, count calories, track macros, and understand your nutrition without typing every
+                        ingredient by hand.</p>
                 </div>
 
                 <div class="features-grid">
                     <div class="card stagger-item fade-up">
                         <div class="card-icon">&#128247;</div>
-                        <h3>Instant AI Recognition</h3>
-                        <p>Point your camera at any meal. CalEye identifies ingredients and calculates macros in under 2
-                            seconds.</p>
+                        <h3>Food Photo Calorie Scanner</h3>
+                        <p>Point your camera at any meal. CalEye identifies ingredients and estimates calories and
+                            macros in under 2 seconds.</p>
                     </div>
 
                     <div class="card stagger-item fade-up">
                         <div class="card-icon orange">&#128202;</div>
-                        <h3>Detailed Nutrition Breakdown</h3>
+                        <h3>Nutrition Tracker Dashboard</h3>
                         <p>Calories, protein, carbs, fats, fiber &mdash; all logged automatically. Visual charts make
                             tracking effortless.</p>
                     </div>
 
                     <div class="card stagger-item fade-up">
                         <div class="card-icon blue">&#127919;</div>
-                        <h3>Smart Daily Goals</h3>
+                        <h3>AI Calorie Tracker Goals</h3>
                         <p>Set personalized calorie and macro targets. CalEye tracks your progress and nudges you toward
                             your goals.</p>
                     </div>
@@ -784,8 +901,8 @@
         <section class="how-it-works-section">
             <div class="container">
                 <div class="section-title fade-up">
-                    <h2>Three steps to smarter eating</h2>
-                    <p>CalEye makes nutrition tracking as simple as taking a photo.</p>
+                    <h2>How the CalEye AI calorie tracker works</h2>
+                    <p>CalEye makes calorie and nutrition tracking as simple as taking a photo.</p>
                 </div>
 
                 <div class="steps-container">
@@ -793,14 +910,16 @@
                         <div class="step-number">1</div>
                         <div class="step-icon">&#128247;</div>
                         <h3>Snap</h3>
-                        <p>Take a photo of your meal using CalEye. Works with any food, any plate.</p>
+                        <p>Take a photo of your meal using CalEye. Works with everyday foods, restaurant meals, and
+                            home-cooked plates.</p>
                     </div>
 
                     <div class="step fade-up" style="animation-delay: 100ms;">
                         <div class="step-number">2</div>
                         <div class="step-icon">&#128247;</div>
                         <h3>Analyze</h3>
-                        <p>AI identifies food and nutrition instantly. Results in under 2 seconds.</p>
+                        <p>AI identifies food, estimates serving size, and calculates calories and nutrition instantly.
+                        </p>
                     </div>
 
                     <div class="step fade-right" style="animation-delay: 200ms;">
@@ -809,6 +928,66 @@
                         <h3>Track</h3>
                         <p>Log it automatically and monitor your daily progress toward your goals.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO FAQ SECTION -->
+        <section class="section-padded" style="background: var(--surface);">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>Calorie Counter app, AI calorie tracker, and nutrition tracker in one</h2>
+                    <p>CalEye combines the three core tools people need for daily food tracking.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="card stagger-item fade-up">
+                        <h3>Calorie Counter app</h3>
+                        <p>Log meals, estimate calories, and review daily totals without manually searching through a
+                            food database for every ingredient.</p>
+                    </div>
+
+                    <div class="card stagger-item fade-up">
+                        <h3>AI Calorie Tracker</h3>
+                        <p>Use food photo recognition to identify meals, estimate portions, and calculate calories and
+                            macros faster than traditional food diary apps.</p>
+                    </div>
+
+                    <div class="card stagger-item fade-up">
+                        <h3>Nutrition Tracker</h3>
+                        <p>Track protein, carbs, fat, fiber, goals, meal history, and progress in one app built for
+                            everyday nutrition decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padded" style="background: var(--bg);">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <h2>Frequently asked questions</h2>
+                    <p>Quick answers for people comparing Calorie Counter app, AI calorie tracker, and Nutrition tracker
+                        options.</p>
+                </div>
+
+                <div class="seo-answer-grid">
+                    <article class="card fade-up">
+                        <h3>Is CalEye a Calorie Counter app?</h3>
+                        <p>Yes. CalEye helps you log meals, estimate calories, and track daily calorie goals from food
+                            photos.</p>
+                    </article>
+
+                    <article class="card fade-up">
+                        <h3>Is CalEye an AI calorie tracker?</h3>
+                        <p>Yes. CalEye uses AI food recognition to identify meals, estimate portions, calculate calories
+                            and macros, and reduce manual entry.</p>
+                    </article>
+
+                    <article class="card fade-up">
+                        <h3>Is CalEye a Nutrition tracker?</h3>
+                        <p>Yes. CalEye tracks calories, protein, carbs, fat, fiber, meal history, daily goals, and
+                            nutrition progress.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -865,8 +1044,8 @@
         <section class="download-cta-section" style="padding: var(--space-xl) 0; margin-bottom: 0;">
             <div class="container">
                 <div class="cta-content fade-up">
-                    <h2>Start tracking in 30 seconds</h2>
-                    <p>Free to download. No account required to start. Just open and snap.</p>
+                    <h2>Download the free Calorie Counter app</h2>
+                    <p>No account required to start. Just open CalEye, snap a meal photo, and log your calories.</p>
 
                     <div class="cta-buttons" data-download-buttons></div>
 

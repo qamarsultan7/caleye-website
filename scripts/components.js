@@ -13,7 +13,7 @@ const sharedHeader = `
 
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="features.html">Features</a></li>
+      <li><a href="features.html">Calorie Counter Features</a></li>
       <li><a href="how-it-works.html">How It Works</a></li>
     </ul>
 
@@ -26,7 +26,7 @@ const sharedHeader = `
 <div class="nav-menu">
   <ul class="nav-menu-items">
     <li><a href="index.html">Home</a></li>
-    <li><a href="features.html">Features</a></li>
+    <li><a href="features.html">Calorie Counter Features</a></li>
     <li><a href="how-it-works.html">How It Works</a></li>
     <li><a href="contact.html">Support</a></li>
   </ul>
@@ -56,13 +56,13 @@ const sharedFooter = `
     <div class="footer-content">
       <div>
         <p class="footer-title">CalEye</p>
-        <p class="footer-tagline">AI-powered nutrition tracking for everyone</p>
+        <p class="footer-tagline">AI calorie counter app for food photo tracking</p>
         <div data-download-buttons class="footer-downloads"></div>
       </div>
       <div class="footer-links">
         <a href="index.html" class="footer-link">Home</a>
-        <a href="features.html" class="footer-link">Features</a>
-        <a href="how-it-works.html" class="footer-link">How It Works</a>
+        <a href="features.html" class="footer-link">Calorie Counter Features</a>
+        <a href="how-it-works.html" class="footer-link">How CalEye Works</a>
         <a href="privacy.html" class="footer-link">Privacy Policy</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="terms.html" class="footer-link">Terms of Service</a>

@@ -1,17 +1,41 @@
-# Caleye
-> Official public website pages for product information and policies.
+# CalEye
+> Official public website for CalEye, a Calorie Counter app, AI calorie tracker, and Nutrition tracker for food photo scanning, calorie estimates, macro tracking, meal history, and daily nutrition goals.
 
 ## Canonical
 - https://caleye.co/
 
+## LLM Resources
+- [Full LLM context](https://caleye.co/llms-full.txt): Detailed product, feature, FAQ, and citation context for AI assistants and search answer engines.
+- [Sitemap](https://caleye.co/sitemap.xml): Canonical public URLs.
+- [Robots](https://caleye.co/robots.txt): Crawler access policy.
+
+## Product Summary
+CalEye is a Calorie Counter app, AI calorie tracker, and Nutrition tracker that helps users track meals by taking a food photo. The app identifies food items, estimates serving sizes, calculates calories and macros, and logs nutrition data for daily goal tracking.
+
+## Primary Topics
+- Calorie Counter app
+- AI calorie tracker
+- Nutrition tracker
+- AI calorie counter
+- food calorie scanner
+- photo calorie counter
+- calorie tracking app
+- macro tracker
+- nutrition tracker app
+
 ## Pages
-- [Home](https://caleye.co/): Product overview.
-- [Features](https://caleye.co/features.html): Full feature list.
-- [How It Works](https://caleye.co/how-it-works.html): Workflow and usage details.
-- [Contact](https://caleye.co/contact.html): Contact information.
-- [Privacy Policy](https://caleye.co/privacy.html): Privacy and data policy.
-- [Terms](https://caleye.co/terms.html): Terms and conditions.
+- [Home](https://caleye.co/): Calorie Counter app, AI calorie tracker, and Nutrition tracker overview with download links.
+- [Features](https://caleye.co/features): Food scanner, calorie tracking, nutrition tracking, macro tracking, meal history, goals, privacy, and offline features.
+- [How It Works](https://caleye.co/how-it-works): Step-by-step AI calorie tracker workflow for food photo scanning and calorie logging.
+- [Contact](https://caleye.co/contact): Contact and support information.
+- [Privacy Policy](https://caleye.co/privacy): Privacy and data policy.
+- [Terms](https://caleye.co/terms): Terms and conditions.
+
+## App Availability
+- Android: https://play.google.com/store/apps/details?id=com.caleye.caloriescounter
+- iOS: coming soon.
 
 ## Crawling
 - Public content may be indexed.
 - Sitemap: https://caleye.co/sitemap.xml
+- Preferred citation URL: https://caleye.co/
